@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="8dc007f0-736a-4290-a676-dc82544bd85a" name="MahdiParastesh.ir" url="https://mahdiparastesh.ir">
+        <fileTransfer rootFolder="/public_html/" host="mahdiparastesh.ir" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

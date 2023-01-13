@@ -1,0 +1,47 @@
+<main class="container text-center" itemscope itemtype="https://schema.org/Person">
+  <img src="%ROOT%/img/en.svg" class="dropdown-toggle" id="langSelect" data-bs-toggle="dropdown">
+  <ul class="dropdown-menu" aria-labelledby="langSelect" id="lang">
+    <li itemscope itemtype="https://schema.org/Language">
+      <img src="%ROOT%/img/en.svg" data-lang="en" itemprop="image">
+      <meta itemprop="name" content="English">
+      <meta itemprop="identifier" content="eng">
+    </li>
+    <li itemscope itemtype="https://schema.org/Language">
+      <img src="%ROOT%/img/fa.svg" data-lang="fa" itemprop="image">
+      <meta itemprop="name" content="Persian">
+      <meta itemprop="identifier" content="pes">
+    </li>
+  </ul><!--In case of SVG error, add ' version="1.1"' to the SVG tag and turn "img/png" to "image/png"-->
+
+  <figure>
+    <img src="%ROOT%/img/mahdi.jpg" itemprop="image">
+    <figcaption><span itemprop="givenName">Mahdi</span> <span itemprop="familyName">Parastesh</span></figcaption>
+  </figure>
+  <blockquote>
+    <p itemprop="description">
+      I have 7 years of experience in <b itemprop="jobTitle">Full-Stack software engineering</b>.
+    </p>
+    <p itemprop="knowsAbout">
+      The programming languages I'm skilled in are JavaScript, PHP, Java, SQL, Kotlin, Dart, Python and Prolog.
+      I develop Android apps using mere Java/Kotlin, or also for iOS using Flutter.
+      I also know Django, Node.js, MySQL and MongoDB.<br>
+      I practice Machine Learning sometimes using TensorFlow and sometimes using my own codes. I'm also an expert in
+      Linux.
+    </p>
+  </blockquote>
+
+  <a href="%ROOT%/cv.pdf" target="_blank" id="cv" itemprop="mainEntityOfPage"
+     itemtype="https://schema.org/AboutPage">View My CV</a>
+
+  <nav id="social">%SOCIAL%
+  </nav>
+
+  <div class="grid text-center" id="projects">%PROJECTS%
+  </div>
+
+  <meta itemprop="email" content="fulcrum522@hotmail.com">
+  <meta itemprop="gender" content="https://schema.org/Male">
+</main>
+<div class="spinner-grow text-light" role="status" id="loading">
+  <span class="visually-hidden">Loading...</span>
+</div>
