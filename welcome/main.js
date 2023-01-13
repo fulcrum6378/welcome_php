@@ -68,7 +68,7 @@ function translate(hl) {
 				"Iranian Android Bazaar Store": "فروشگاه اپلیکیشن ایرانی بازار",
 				"APKPure.com a third-party APK store": "یک وبسایت معروف دانلود اپ اندروید",
 				"Download for Android (Gregorian calendar)": "دانلود برای اندروید (تقویم میلادی)",
-				"Download for Android (Persian calendar)": "دانلود برای اندروید (تقویم شمسی)",
+				"Download for Android (Humanist Iranian calendar)": "دانلود برای اندروید (تقویم اومانیستی ایرانی)",
 				"Wordpress Theme": "تم وردپرس",
 			};
             break;
