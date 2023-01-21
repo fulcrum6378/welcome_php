@@ -100,7 +100,7 @@ $projects = array(
     ),
     new Project(
         "fortuna", "fortuna", "Fortuna",
-        "An application of the Hedonist philosophy!",
+        "An open-source application of the Hedonist philosophy!",
         array(
             new Link(
                 "https://github.com/fulcrum1378/fortuna/raw/master/app/gregorian/release/app-gregorian-release"
