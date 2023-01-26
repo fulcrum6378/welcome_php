@@ -56,9 +56,9 @@ $social = array(
     new Link("https://stackoverflow.com/users/10728785/mahdi-parastesh",
         "User Mahdi Parastesh - Stack Overflow", icon: "stackoverflow"),
     new Link("https://www.facebook.com/mpg973", "Mahdi Prs", icon: "facebook"),
-    /*new Link("https://twitter.com/fulcrum786", "Mahdi Parastesh (@fulcrum786) / Twitter", icon: "twitter"),
-    new Link("https://www.instagram.com/fulcrum786/",
-        "Mahdi Parastesh (@fulcrum786) • Instagram photos and videos", icon: "instagram"),*/
+    /*new Link("https://twitter.com/fulcrum6378", "Mahdi Parastesh (@fulcrum6378) / Twitter", icon: "twitter"),
+    new Link("https://www.instagram.com/fulcrum6378/",
+        "Mahdi Parastesh (@fulcrum6378) • Instagram photos and videos", icon: "instagram"),*/
     new Link("https://linktr.ee/fulcrum1378", "Mahdi Parastesh | Linktree", icon: "linktree"),
 );
 $htmlSocial = "";
