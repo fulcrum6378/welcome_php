@@ -103,11 +103,11 @@ $projects = array(
         "An open-source application of the Hedonist philosophy!",
         array(
             new Link(
-                "https://github.com/fulcrum1378/fortuna/raw/master/app/gregorian/release/app-gregorian-release"
-                . ".apk", name: "Download for Android (Gregorian calendar)", microType: "downloadUrl"),
+                "https://github.com/fulcrum1378/fortuna/raw/master/app/gregorian/release/app-gregorian-release.apk",
+                name: "Download for Android (Gregorian calendar)", microType: "downloadUrl"),
             new Link(
-                "https://github.com/fulcrum1378/fortuna/raw/master/app/gregorian/release/app-iranian-release"
-                . ".apk", name: "Download for Android (Humanist Iranian calendar)", microType: "downloadUrl"),
+                "https://github.com/fulcrum1378/fortuna/raw/master/app/iranian/release/app-iranian-release.apk",
+                name: "Download for Android (Humanist Iranian calendar)", microType: "downloadUrl"),
             new Link(
                 "https://fortuna.mahdiparastesh.ir/",
                 name: "Website (Demo)", microType: "sameAs"),
