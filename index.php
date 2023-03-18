@@ -48,7 +48,7 @@ class Link
 // Process the current page: Main
 $main = file_get_contents("welcome/main.html");
 $social = array(
-    new Link("https://github.com/fulcrum1378", "fulcrum1378 (Mahdi Parastesh) · GitHub", icon: "github"),
+    new Link("https://github.com/fulcrum6378", "fulcrum6378 (Mahdi Parastesh) · GitHub", icon: "github"),
     new Link("https://www.linkedin.com/in/fulcrum6378/", "Mahdi Parastesh | LinkedIn", icon: "linkedin"),
     new Link("https://play.google.com/store/apps/dev?id=8797895762316770334",
         "Android Apps by Mahdi Parastesh on Google Play", icon: "google_play"),
@@ -72,7 +72,7 @@ $projects = array(
         "mergen4", "mergen_iv", "Mergen IV",
         "A logical multi-sensed artificially intelligent robot (AIR) software. Temporarily designed for Android.",
         array(
-            new Link("https://github.com/fulcrum1378/mergen_android",
+            new Link("https://github.com/fulcrum6378/mergen_android",
                 name: "Android Source", microType: "sameAs"),
         ),
         "SoftwareApplication", "Android", "AI, Logic, Robot"
@@ -101,19 +101,19 @@ $projects = array(
         "An open-source application of the Hedonist philosophy!",
         array(
             new Link(
-                "https://github.com/fulcrum1378/fortuna/raw/master/app/gregorian/release/app-gregorian-release.apk",
+                "https://github.com/fulcrum6378/fortuna/raw/master/app/gregorian/release/app-gregorian-release.apk",
                 name: "Download for Android (Gregorian calendar)", microType: "downloadUrl"),
             new Link(
-                "https://github.com/fulcrum1378/fortuna/raw/master/app/iranian/release/app-iranian-release.apk",
+                "https://github.com/fulcrum6378/fortuna/raw/master/app/iranian/release/app-iranian-release.apk",
                 name: "Download for Android (Humanist Iranian calendar)", microType: "downloadUrl"),
             new Link(
                 "https://fortuna.mahdiparastesh.ir/",
                 name: "Website (Demo)", microType: "sameAs"),
             new Link(
-                "https://github.com/fulcrum1378/fortuna",
+                "https://github.com/fulcrum6378/fortuna",
                 name: "Android Source (Kotlin)", microType: "url"),
             new Link(
-                "https://github.com/fulcrum1378/fortuna_flutter",
+                "https://github.com/fulcrum6378/fortuna_flutter",
                 name: "Flutter Source", microType: "url"),
         ),
         "SoftwareApplication", "Android, Web, iOS", "Philosophy, Lifestyle, Events, Health"
@@ -147,7 +147,7 @@ $projects = array(
                 title: "Iranian Android Bazaar Store", name: "Bazaar", microType: "installUrl"),
             new Link("https://myket.ir/app/ir.mahdiparastesh.migratio",
                 title: "Iranian Android Myket Store", name: "Myket", microType: "installUrl"),
-            new Link("https://github.com/fulcrum1378/migratio",
+            new Link("https://github.com/fulcrum6378/migratio",
                 title: "Wordpress Theme", name: "Web Template", microType: "url"),
             new Link("https://mahdiparastesh.ir/welcome/privacy/migratio.html",
                 name: "Privacy Policy", microType: "publishingPrinciples"),
@@ -160,10 +160,10 @@ $projects = array(
         . "It was replaced by one which didn't need server and client. (archived project)",
         array(
             new Link(
-                "https://github.com/fulcrum1378/mergen_server",
+                "https://github.com/fulcrum6378/mergen_server",
                 name: "Server Source (Python)", microType: "sameAs"),
             new Link(
-                "https://github.com/fulcrum1378/mergen_client",
+                "https://github.com/fulcrum6378/mergen_client",
                 name: "Android Source (Kotlin)", microType: "url"),
         ),
         "SoftwareApplication", "Android, Windows, Linux, macOS",
@@ -175,10 +175,10 @@ $projects = array(
         . "AI robot. (archived project)",
         array(
             new Link(
-                "https://github.com/fulcrum1378/pronouncer",
+                "https://github.com/fulcrum6378/pronouncer",
                 name: "Server Source (Python)", microType: "sameAs"),
             new Link(
-                "https://github.com/fulcrum1378/mergen_client",
+                "https://github.com/fulcrum6378/mergen_client",
                 name: "Android Source (Kotlin)", microType: "url"),
         ),
         "SoftwareApplication", "Android, Windows, Linux, macOS",
@@ -190,7 +190,7 @@ $projects = array(
         . "It was replaced by an auditory one. (archived project)",
         array(
             new Link(
-                "https://github.com/fulcrum1378/mergen_server",
+                "https://github.com/fulcrum6378/mergen_server",
                 name: "Software Source (Python)", microType: "sameAs"),
         ),
         "SoftwareApplication", "Android, Windows, Linux, macOS",
@@ -201,7 +201,7 @@ $projects = array(
         "Easily track your friends on the map. (archived project)",
         array(
             new Link(
-                "https://github.com/fulcrum1378/friend_tracker",
+                "https://github.com/fulcrum6378/friend_tracker",
                 name: "Android Source (Java)", microType: "sameAs"),
         ),
         "MobileApplication", "Android", "Maps & Navigation, Communication, Social"
@@ -211,7 +211,7 @@ $projects = array(
         "Stock market data collector based on MetaTrader5 (archived project)",
         array(
             new Link(
-                "https://github.com/fulcrum1378/saam",
+                "https://github.com/fulcrum6378/saam",
                 name: "Software Source (Python)", microType: "sameAs"),
         ),
         "SoftwareApplication", "Windows", "Finance, Business, Tools"
