@@ -69,30 +69,15 @@ foreach ($social as $link) $htmlSocial .= '
     </span>';
 $projects = array(
     new Project(
-        "mergen4", "mergen_iv", "Mergen IV",
-        "A logical multi-sensed artificially intelligent robot (AIR) software. Temporarily designed for Android.",
-        array(
-            new Link("https://github.com/fulcrum6378/mergen_android",
-                name: "Android Source", microType: "sameAs"),
-        ),
-        "SoftwareApplication", "Android", "AI, Logic, Robot"
-    ),
-    new Project(
         "instatools", "instatools", "InstaTools",
         "Find unfollowers, download all saved posts, download any post and export DMs into HTML, PDF and TXT.",
         array(
-            new Link("https://galaxystore.samsung.com/detail/ir.mahdiparastesh.instatools.beth",
-                name: "Galaxy Store", microType: "installUrl"),
-            new Link("https://store.nashstore.ru/store/6295e2d7fb3ed3bb471ff674",
-                title: "Russian App Store", name: "NashStore", microType: "installUrl"),
             new Link("https://cafebazaar.ir/app/ir.mahdiparastesh.instatools",
                 title: "Iranian Android Bazaar Store", name: "Bazaar", microType: "installUrl"),
             new Link("https://myket.ir/app/ir.mahdiparastesh.instatools",
                 title: "Iranian Android Myket Store", name: "Myket", microType: "installUrl"),
-            new Link("https://apkpure.com/p/ir.mahdiparastesh.instatools.beth",
-                title: "APKPure.com a third-party APK store", name: "APKPure", microType: "installUrl"),
-            new Link("https://mahdiparastesh.ir/welcome/privacy/instatools.html",
-                name: "Privacy Policy", microType: "publishingPrinciples"),
+            /*new Link("https://mahdiparastesh.ir/welcome/privacy/instatools.html",
+                name: "Privacy Policy", microType: "publishingPrinciples"),*/
         ),
         "MobileApplication", "Android", "Tools, Personalisation"
     ),
@@ -101,14 +86,17 @@ $projects = array(
         "An open-source application of the Hedonist philosophy!",
         array(
             new Link(
-                "https://github.com/fulcrum6378/fortuna/raw/master/app/gregorian/release/app-gregorian-release.apk",
-                name: "Download for Android (Gregorian calendar)", microType: "downloadUrl"),
+                "https://play.google.com/store/apps/details?id=ir.mahdiparastesh.fortuna.gregorian",
+                name: "Google Play", microType: "installUrl"),
             new Link(
                 "https://github.com/fulcrum6378/fortuna/raw/master/app/iranian/release/app-iranian-release.apk",
                 name: "Download for Android (Humanist Iranian calendar)", microType: "downloadUrl"),
             new Link(
+                "https://mahdiparastesh.ir/welcome/privacy/fortuna.html",
+                name: "Privacy Policy", microType: "publishingPrinciples"),
+            /*new Link(
                 "https://fortuna.mahdiparastesh.ir/",
-                name: "Website (Demo)", microType: "sameAs"),
+                name: "Website (Demo)", microType: "sameAs"),*/
             new Link(
                 "https://github.com/fulcrum6378/fortuna",
                 name: "Android Source (Kotlin)", microType: "url"),
@@ -153,6 +141,15 @@ $projects = array(
                 name: "Privacy Policy", microType: "publishingPrinciples"),
         ),
         "SoftwareApplication", "Android, Web", "Tools, Travel, Migration"
+    ),
+    new Project(
+        "mergen4", "mergen_iv", "Mergen IV",
+        "A logical multi-sensed artificially intelligent robot (AIR) software. Temporarily designed for Android.",
+        array(
+            new Link("https://github.com/fulcrum6378/mergen_android",
+                name: "Android Source", microType: "sameAs"),
+        ),
+        "SoftwareApplication", "Android", "AI, Logic, Robot"
     ),
     new Project(
         "mergen3", "mergen", "Mergen III",
