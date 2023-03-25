@@ -84,7 +84,7 @@ function translate(hl) {
                 "Iranian Android Myket Store": "فروشگاه اپلیکیشن ایرانی مایکت",
                 "Iranian Android Bazaar Store": "فروشگاه اپلیکیشن ایرانی بازار",
                 "APKPure.com a third-party APK store": "یک وبسایت معروف دانلود اپ اندروید",
-                "Download for Android (Humanist Iranian calendar)": "دانلود برای اندروید (تقویم اومانیستی ایرانی)",
+                "Download for Android": "دانلود برای اندروید",
                 "Wordpress Theme": "تم وردپرس",
             };
             if (document.location.toString().indexOf("hl=en") !== -1)

@@ -48,16 +48,16 @@ class Link
 // Process the current page: Main
 $main = file_get_contents("welcome/main.html");
 $social = array(
+    new Link("https://www.facebook.com/mpg973", "Mahdi Prs", icon: "facebook"),
+    /*new Link("https://www.instagram.com/fulcrum6378/",
+        "Mahdi Parastesh (@fulcrum6378) • Instagram photos and videos", icon: "instagram"),*/
+    /*new Link("https://twitter.com/fulcrum6378", "Mahdi Parastesh (@fulcrum6378) / Twitter", icon: "twitter"),*/
     new Link("https://github.com/fulcrum6378", "fulcrum6378 (Mahdi Parastesh) · GitHub", icon: "github"),
     new Link("https://www.linkedin.com/in/fulcrum6378/", "Mahdi Parastesh | LinkedIn", icon: "linkedin"),
     new Link("https://play.google.com/store/apps/dev?id=8797895762316770334",
         "Android Apps by Mahdi Parastesh on Google Play", icon: "google_play"),
     new Link("https://stackoverflow.com/users/10728785/mahdi-parastesh",
         "User Mahdi Parastesh - Stack Overflow", icon: "stackoverflow"),
-    new Link("https://www.facebook.com/mpg973", "Mahdi Prs", icon: "facebook"),
-    /*new Link("https://twitter.com/fulcrum6378", "Mahdi Parastesh (@fulcrum6378) / Twitter", icon: "twitter"),
-    new Link("https://www.instagram.com/fulcrum6378/",
-        "Mahdi Parastesh (@fulcrum6378) • Instagram photos and videos", icon: "instagram"),*/
 );
 $htmlSocial = "";
 foreach ($social as $link) $htmlSocial .= '
@@ -72,6 +72,8 @@ $projects = array(
         "instatools", "instatools", "InstaTools",
         "Find unfollowers, download all saved posts, download any post and export DMs into HTML, PDF and TXT.",
         array(
+            new Link("https://mahdiparastesh.ir/misc/instatools.apk",
+                name: "Download for Android", microType: "downloadUrl"),
             new Link("https://cafebazaar.ir/app/ir.mahdiparastesh.instatools",
                 title: "Iranian Android Bazaar Store", name: "Bazaar", microType: "installUrl"),
             new Link("https://myket.ir/app/ir.mahdiparastesh.instatools",
@@ -86,29 +88,26 @@ $projects = array(
         "An open-source application of the Hedonist philosophy!",
         array(
             new Link(
+                "https://github.com/fulcrum6378/fortuna",
+                name: "Android Source (Kotlin)", microType: "url"),
+            new Link(
                 "https://play.google.com/store/apps/details?id=ir.mahdiparastesh.fortuna.gregorian",
                 name: "Google Play", microType: "installUrl"),
             new Link(
-                "https://github.com/fulcrum6378/fortuna/raw/master/app/iranian/release/app-iranian-release.apk",
-                name: "Download for Android (Humanist Iranian calendar)", microType: "downloadUrl"),
-            new Link(
-                "https://mahdiparastesh.ir/welcome/privacy/fortuna.html",
-                name: "Privacy Policy", microType: "publishingPrinciples"),
+                "https://github.com/fulcrum6378/fortuna_flutter",
+                name: "Flutter Source", microType: "url"),
             /*new Link(
                 "https://fortuna.mahdiparastesh.ir/",
                 name: "Website (Demo)", microType: "sameAs"),*/
             new Link(
-                "https://github.com/fulcrum6378/fortuna",
-                name: "Android Source (Kotlin)", microType: "url"),
-            new Link(
-                "https://github.com/fulcrum6378/fortuna_flutter",
-                name: "Flutter Source", microType: "url"),
+                "https://mahdiparastesh.ir/welcome/privacy/fortuna.html",
+                name: "Privacy Policy", microType: "publishingPrinciples"),
         ),
         "SoftwareApplication", "Android, Web, iOS", "Philosophy, Lifestyle, Events, Health"
     ),
     new Project(
         "telexporter", "telexporter", "Telexporter",
-        "Export your messages and call history to HTML, PDF or TXT files.",
+        "Export your messages and call history into HTML, PDF or TXT file types.",
         array(
             new Link("https://galaxystore.samsung.com/detail/ir.mahdiparastesh.telexporter",
                 name: "Galaxy Store", microType: "installUrl"),
@@ -129,8 +128,8 @@ $projects = array(
                 name: "Google Play", microType: "installUrl"),
             new Link("https://galaxystore.samsung.com/detail/ir.mahdiparastesh.migratio",
                 name: "Galaxy Store", microType: "installUrl"),
-            new Link("https://migratio.mahdiparastesh.ir/",
-                name: "Website", microType: "sameAs"),
+            /*new Link("https://migratio.mahdiparastesh.ir/",
+                name: "Website", microType: "sameAs"),*/
             new Link("https://cafebazaar.ir/app/ir.mahdiparastesh.migratio",
                 title: "Iranian Android Bazaar Store", name: "Bazaar", microType: "installUrl"),
             new Link("https://myket.ir/app/ir.mahdiparastesh.migratio",
