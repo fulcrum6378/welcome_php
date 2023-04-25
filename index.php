@@ -1,10 +1,12 @@
 <?php
-// Load the template
+// Load the templates
 $tmp = file_get_contents("welcome/temp.html");
+global $s;
+require 'welcome/lang.php';
+$l = 0;
 
-// Define classes
-class Project
-{
+// Class declarations
+class Project {
     public string $id;
     public string $icon;
     public string $name;
@@ -14,8 +16,7 @@ class Project
     public string $os;
     public string $category;
 
-    function __construct($id, $icon, $name, $desc, $anchors, $microType, $os, $category)
-    {
+    function __construct($id, $icon, $name, $desc, $anchors, $microType, $os, $category) {
         $this->id = $id;
         $this->icon = $icon;
         $this->name = $name;
@@ -27,16 +28,14 @@ class Project
     }
 }
 
-class Link
-{
+class Link {
     public string $href;
     public string $title;
     public ?string $name;
     public ?string $icon;
     public ?string $microType;
 
-    function __construct($href, $title = "", $name = null, $icon = null, $microType = null)
-    {
+    function __construct($href, $title = "", $name = null, $icon = null, $microType = null) {
         $this->href = $href;
         $this->title = $title;
         $this->name = $name;
@@ -266,9 +265,9 @@ $tmp = str_replace("%CONTENT%", $main, $tmp);
 $data = array(
     "ROOT" => "/welcome",
     "PAGE" => "main",
-    "TITLE" => "Mahdi Parastesh",
-    "HELP" => $_GET["hl"] ?? "",
-    "COUNTRY" => "",
+    "TITLE" => $s['TITLE'][$l],
+    "HELP" => $_GET['hl'] ?? '',
+    "COUNTRY" => '',
 );
 $keys = array();
 foreach (array_keys($data) as $k) $keys[] = "%$k%";

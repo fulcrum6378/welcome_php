@@ -14,7 +14,6 @@ function translate(hl) {
     let dict;
     switch (hl) {
         case "fa":
-            document.title = "مهدی پرستش";
             $("figcaption").text("مهدی پرستش");
             $("blockquote").html(
                 "بنده مدت ۵ سال در برنامه نویسی اندروید و ۳ سال در کدنویسی فولستک (بک اند + فرانت اند) بعلاوه فلاتر " +
