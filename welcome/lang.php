@@ -1,4 +1,4 @@
-<?php // ./composer/composer require "twig/twig:^3.0" --ignore-platform-reqs
+<?php
 $s = array(
     "TITLE" => [
         "Mahdi Parastesh",

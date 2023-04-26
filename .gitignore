@@ -6,5 +6,5 @@ welcome/privacy/
 app-ads.txt
 
 # Composer (PHP dependency manager)
-composer/
+.composer/
 welcome/vendor/

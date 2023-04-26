@@ -1,10 +1,11 @@
 <?php /** @noinspection PhpUnhandledExceptionInspection */
 error_reporting(E_ALL ^ E_DEPRECATED);
 
+require_once 'welcome/lang.php';
 require_once 'welcome/vendor/autoload.php';
-global $s;
-require 'welcome/lang.php';
-$l = 0;
+
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
 
 // Class declarations
 class Project {
@@ -269,12 +270,12 @@ $data = array(
     'SOCIAL' => $htmlSocial,
     'PROJECTS' => $htmlProjects,
 );
+global $s;
+$l = 0;
 foreach ($s as $key => $value) $data[$key] = $value[$l];
 
 // Render the template using Twig
-use Twig\Environment;
-use Twig\Loader\FilesystemLoader;
-
+// For that, run $ cd welcome; ../.composer/composer require "twig/twig:^3.0" --ignore-platform-reqs
 $twig = new Environment(new FilesystemLoader(["welcome"]));
 $data["CONTENT"] = $twig->render('main.html', $data);
 echo $twig->render('temp.html', $data);
