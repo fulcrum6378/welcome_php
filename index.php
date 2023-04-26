@@ -1,9 +1,19 @@
 <?php
-// Load the templates
-$tmp = file_get_contents("welcome/temp.html");
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
+
+require_once 'vendor/autoload.php';
 global $s;
 require 'welcome/lang.php';
 $l = 0;
+
+error_reporting(E_ALL ^ E_DEPRECATED);
+
+// Load the templates
+$tmp = file_get_contents("welcome/temp.html");
 
 // Class declarations
 class Project {
@@ -273,6 +283,20 @@ $keys = array();
 foreach (array_keys($data) as $k) $keys[] = "%$k%";
 $tmp = str_replace($keys, array_values($data), $tmp);
 echo $tmp;
+
+$loader = new ArrayLoader([
+    'temp' => "Hello {{ name }}!
+    ",
+]);
+$twig = new Environment($loader);
+$loader->setTemplate();
+
+try {
+    echo $twig->render('index', ['name' => 'Fabien']);
+} catch (LoaderError|RuntimeError|SyntaxError $e) {
+}
+
+
 
 /*TODO:
  * List the Github Gists in a new grid
