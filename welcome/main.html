@@ -36,10 +36,10 @@
   <a href="{{ ROOT }}/cv.pdf" target="_blank" id="cv" itemprop="mainEntityOfPage"
      itemtype="https://schema.org/AboutPage">View My CV</a>
 
-  <nav id="social">%SOCIAL%
+  <nav id="social">{% autoescape false %}{{ SOCIAL }}{% endautoescape %}
   </nav>
 
-  <div class="grid text-center" id="projects">%PROJECTS%
+  <div class="grid text-center" id="projects">{% autoescape false %}{{ PROJECTS }}{% endautoescape %}
   </div>
 
   <meta itemprop="email" content="fulcrum522@hotmail.com">

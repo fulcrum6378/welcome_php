@@ -7,6 +7,4 @@ app-ads.txt
 
 # Composer (PHP dependency manager)
 composer/
-vendor/
-composer.json
-composer.lock
+welcome/vendor/

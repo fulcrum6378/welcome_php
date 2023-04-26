@@ -1,19 +1,10 @@
-<?php
+<?php /** @noinspection PhpUnhandledExceptionInspection */
+error_reporting(E_ALL ^ E_DEPRECATED);
 
-use Twig\Environment;
-use Twig\Error\LoaderError;
-use Twig\Error\RuntimeError;
-use Twig\Error\SyntaxError;
-
-require_once 'vendor/autoload.php';
+require_once 'welcome/vendor/autoload.php';
 global $s;
 require 'welcome/lang.php';
 $l = 0;
-
-error_reporting(E_ALL ^ E_DEPRECATED);
-
-// Load the templates
-$tmp = file_get_contents("welcome/temp.html");
 
 // Class declarations
 class Project {
@@ -268,34 +259,25 @@ foreach ($projects as $p) {
       <meta itemprop="applicationCategory" content="' . $p->category . '">
     </section>';
 }
-$main = str_replace(["%SOCIAL%", "%PROJECTS%"], [$htmlSocial, $htmlProjects], $main);
 
-// Merge it with the template
-$tmp = str_replace("%CONTENT%", $main, $tmp);
+// Collect the required data for the templates
 $data = array(
-    "ROOT" => "/welcome",
-    "PAGE" => "main",
-    "TITLE" => $s['TITLE'][$l],
-    "HELP" => $_GET['hl'] ?? '',
-    "COUNTRY" => '',
+    'ROOT' => '/welcome',
+    'PAGE' => 'main',
+    'HELP' => $_GET['hl'] ?? '',
+    'COUNTRY' => '',
+    'SOCIAL' => $htmlSocial,
+    'PROJECTS' => $htmlProjects,
 );
-$keys = array();
-foreach (array_keys($data) as $k) $keys[] = "%$k%";
-$tmp = str_replace($keys, array_values($data), $tmp);
-echo $tmp;
+foreach ($s as $key => $value) $data[$key] = $value[$l];
 
-$twig = new Environment(new Twig\Loader\FilesystemLoader(["welcome"]));
+// Render the template using Twig
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
 
-$loader = new ArrayLoader([
-    'temp' => "Hello {{ name }}!
-    ",
-]);
-
-try {
-    echo $twig->render('index', ['name' => 'Fabien']);
-} catch (LoaderError|RuntimeError|SyntaxError $e) {
-}
-
+$twig = new Environment(new FilesystemLoader(["welcome"]));
+$data["CONTENT"] = $twig->render('main.html', $data);
+echo $twig->render('temp.html', $data);
 
 
 /*TODO:

@@ -22,10 +22,10 @@
 </head>
 
 <body>
-%CONTENT%
+{% autoescape false %}{{ CONTENT }}{% endautoescape %}
 
-<input type="hidden" id="country" value="%COUNTRY%">
-<input type="hidden" id="help" value="%HELP%">
+<input type="hidden" id="country" value="{{ COUNTRY }}">
+<input type="hidden" id="help" value="{{ HELP }}">
 <script src="{{ ROOT }}/{{ PAGE }}.js"></script>
 </body>
 </html>
