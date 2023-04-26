@@ -73,7 +73,7 @@ foreach ($social as $link) $htmlSocial .= '
     <span class="social" data-bs-toggle="tooltip" data-bs-placement="top" title="' . $link->title . '"
           itemprop="mainEntityOfPage" itemscope itemtype="https://schema.org/ProfilePage">
       <a href="' . $link->href . '" target="_blank" itemprop="sameAs">
-        <img src="%ROOT%/img/' . $link->icon . '.svg" alt="' . $link->icon . '" itemprop="thumbnailUrl">
+        <img src="{{ ROOT }}/img/' . $link->icon . '.svg" alt="' . $link->icon . '" itemprop="thumbnailUrl">
       </a>
     </span>';
 $projects = array(
@@ -257,7 +257,7 @@ foreach ($projects as $p) {
         <span></span>
         <span></span>
         <span></span>
-        <img src="%ROOT%/img/' . $p->icon . '_round.png" alt="' . $p->icon . '" class="icon" itemprop="logo">
+        <img src="{{ ROOT }}/img/' . $p->icon . '_round.png" alt="' . $p->icon . '" class="icon" itemprop="logo">
         <p class="projName" itemprop="name">' . $p->name . '</p>
         <p class="projDesc" itemprop="disambiguatingDescription">
           ' . $p->desc . '
@@ -284,12 +284,12 @@ foreach (array_keys($data) as $k) $keys[] = "%$k%";
 $tmp = str_replace($keys, array_values($data), $tmp);
 echo $tmp;
 
+$twig = new Environment(new Twig\Loader\FilesystemLoader(["welcome"]));
+
 $loader = new ArrayLoader([
     'temp' => "Hello {{ name }}!
     ",
 ]);
-$twig = new Environment($loader);
-$loader->setTemplate();
 
 try {
     echo $twig->render('index', ['name' => 'Fabien']);
