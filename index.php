@@ -18,11 +18,12 @@ class Project {
     public string $os;
     public string $category;
 
-    function __construct($id, $icon, $name, $desc, $anchors, $microType, $os, $category) {
+    function __construct($id, $icon, $anchors, $microType, $os, $category) {
+        global $l, $sp;
         $this->id = $id;
         $this->icon = $icon;
-        $this->name = $name;
-        $this->desc = $desc;
+        $this->name = $sp[$id . 'Name'][$l];
+        $this->desc = $sp[$id . 'Desc'][$l];
         $this->anchors = $anchors;
         $this->microType = $microType;
         $this->os = $os;
@@ -46,8 +47,14 @@ class Link {
     }
 }
 
+// Choose the language
+$l = match ($_GET['hl']) {
+    'fa' => 1,
+    default => 0,
+};
+
 // Process the current page: Main
-$main = file_get_contents("welcome/main.html");
+global $sp;
 $social = array(
     new Link("https://www.facebook.com/mpg973", "Mahdi Prs", icon: "facebook"),
     /*new Link("https://www.instagram.com/fulcrum6378/",
@@ -61,169 +68,144 @@ $social = array(
         "User Mahdi Parastesh - Stack Overflow", icon: "stackoverflow"),
 );
 $projects = array(
-    new Project(
-        "instatools", "instatools", "InstaTools",
-        "Find unfollowers, download all saved posts, download any post and export DMs into HTML, PDF and TXT.",
+    new Project('it', "instatools",
         array(
             new Link("https://mahdiparastesh.ir/misc/instatools.apk",
-                name: "Download for Android", microType: "downloadUrl"),
+                name: $sp['apk'][$l], microType: "downloadUrl"),
             new Link("https://cafebazaar.ir/app/ir.mahdiparastesh.instatools",
-                title: "Iranian Android Bazaar Store", name: "Bazaar", microType: "installUrl"),
+                title: $sp['bazaarDesc'][$l], name: $sp['bazaar'][$l], microType: "installUrl"),
             new Link("https://myket.ir/app/ir.mahdiparastesh.instatools",
-                title: "Iranian Android Myket Store", name: "Myket", microType: "installUrl"),
+                title: $sp['myketDesc'][$l], name: $sp['myket'][$l], microType: "installUrl"),
             /*new Link("https://mahdiparastesh.ir/welcome/privacy/instatools.html",
-                name: "Privacy Policy", microType: "publishingPrinciples"),*/
+                name: $sp['privacy'][$l], microType: "publishingPrinciples"),*/
         ),
         "MobileApplication", "Android", "Tools, Personalisation"
     ),
-    new Project(
-        "fortuna", "fortuna", "Fortuna",
-        "An open-source application of the Hedonist philosophy!",
+    new Project('fr', "fortuna",
         array(
             new Link(
                 "https://github.com/fulcrum6378/fortuna",
-                name: "Android Source (Kotlin)", microType: "url"),
+                name: $sp['androidKotlin'][$l], microType: "url"),
             new Link(
                 "https://play.google.com/store/apps/details?id=ir.mahdiparastesh.fortuna.gregorian",
-                name: "Google Play", microType: "installUrl"),
+                name: $sp['googlePlay'][$l], microType: "installUrl"),
             new Link(
                 "https://github.com/fulcrum6378/fortuna_flutter",
-                name: "Flutter Source", microType: "url"),
+                name: $sp['flutter'][$l], microType: "url"),
             /*new Link(
                 "https://fortuna.mahdiparastesh.ir/",
-                name: "Website (Demo)", microType: "sameAs"),*/
+                name: $sp['websiteDemo'][$l], microType: "sameAs"),*/
             new Link(
                 "https://mahdiparastesh.ir/welcome/privacy/fortuna.html",
-                name: "Privacy Policy", microType: "publishingPrinciples"),
+                name: $sp['privacy'][$l], microType: "publishingPrinciples"),
         ),
         "SoftwareApplication", "Android, Web, iOS", "Philosophy, Lifestyle, Events, Health"
     ),
-    new Project(
-        "telexporter", "telexporter", "Telexporter",
-        "Export your messages and call history into HTML, PDF or TXT file types.",
+    new Project('tx', "telexporter",
         array(
             new Link("https://galaxystore.samsung.com/detail/ir.mahdiparastesh.telexporter",
-                name: "Galaxy Store", microType: "installUrl"),
+                name: $sp['galaxyStore'][$l], microType: "installUrl"),
             new Link("https://cafebazaar.ir/app/ir.mahdiparastesh.telexporter",
-                title: "Iranian Android Bazaar Store", name: "Bazaar", microType: "installUrl"),
+                title: $sp['bazaarDesc'][$l], name: $sp['bazaar'][$l], microType: "installUrl"),
             new Link("https://myket.ir/app/ir.mahdiparastesh.telexporter",
-                title: "Iranian Android Myket Store", name: "Myket", microType: "installUrl"),
+                title: $sp['myketDesc'][$l], name: $sp['myket'][$l], microType: "installUrl"),
             new Link("https://mahdiparastesh.ir/welcome/privacy/telexporter.html",
-                name: "Privacy Policy", microType: "publishingPrinciples"),
+                name: $sp['privacy'][$l], microType: "publishingPrinciples"),
         ),
         "MobileApplication", "Android", "Tools"
     ),
-    new Project(
-        "migratio", "migratio", "Migratio",
-        "A geographical statistical tool for determining someone's best destination for migration.",
+    new Project("mg", "migratio",
         array(
             new Link("https://play.google.com/store/apps/details?id=ir.mahdiparastesh.migratio",
-                name: "Google Play", microType: "installUrl"),
+                name: $sp['googlePlay'][$l], microType: "installUrl"),
             new Link("https://galaxystore.samsung.com/detail/ir.mahdiparastesh.migratio",
-                name: "Galaxy Store", microType: "installUrl"),
+                name: $sp['galaxyStore'][$l], microType: "installUrl"),
             /*new Link("https://migratio.mahdiparastesh.ir/",
-                name: "Website", microType: "sameAs"),*/
+                name: $sp['website'][$l], microType: "sameAs"),*/
             new Link("https://cafebazaar.ir/app/ir.mahdiparastesh.migratio",
-                title: "Iranian Android Bazaar Store", name: "Bazaar", microType: "installUrl"),
+                title: $sp['bazaarDesc'][$l], name: $sp['bazaar'][$l], microType: "installUrl"),
             new Link("https://myket.ir/app/ir.mahdiparastesh.migratio",
-                title: "Iranian Android Myket Store", name: "Myket", microType: "installUrl"),
+                title: $sp['myketDesc'][$l], name: $sp['myket'][$l], microType: "installUrl"),
             new Link("https://github.com/fulcrum6378/migratio_android",
-                name: "Android Source (Kotlin)", microType: "url"),
+                name: $sp['androidKotlin'][$l], microType: "url"),
             new Link("https://github.com/fulcrum6378/migratio",
-                title: "Wordpress Theme", name: "Web Template", microType: "url"),
+                name: $sp['wpTheme'][$l], microType: "url"),
             new Link("https://mahdiparastesh.ir/welcome/privacy/migratio.html",
-                name: "Privacy Policy", microType: "publishingPrinciples"),
+                name: $sp['privacy'][$l], microType: "publishingPrinciples"),
         ),
         "SoftwareApplication", "Android, Web", "Tools, Travel, Migration"
     ),
-    new Project(
-        "mergen4", "mergen_iv", "Mergen IV",
-        "A logical multi-sensed artificially intelligent robot (AIR) software. Temporarily designed for Android.",
+    new Project("m4", "mergen_iv",
         array(
             new Link("https://github.com/fulcrum6378/mergen_android",
-                name: "Android Source", microType: "sameAs"),
+                name: $sp['androidJava'][$l], microType: "sameAs"),
         ),
         "SoftwareApplication", "Android", "AI, Logic, Robot"
     ),
-    new Project(
-        "mergen3", "mergen", "Mergen III",
-        "A multi-sensed artificially intelligent robot (AIR) software, which needed a server and (a) client(s). "
-        . "It was replaced by one which didn't need server and client. (archived project)",
+    new Project("m3", "mergen",
         array(
             new Link(
                 "https://github.com/fulcrum6378/mergen_server",
-                name: "Server Source (Python)", microType: "sameAs"),
+                name: $sp['serverPython'][$l], microType: "sameAs"),
             new Link(
                 "https://github.com/fulcrum6378/mergen_client",
-                name: "Android Source (Kotlin)", microType: "url"),
+                name: $sp['androidKotlin'][$l], microType: "url"),
         ),
         "SoftwareApplication", "Android, Windows, Linux, macOS",
         "Artificial Intelligence, AI, Logic, NLP"
     ),
-    new Project(
-        "mergen2", "mergen_red", "Mergen II (Pronouncer)",
-        "An auditory (talking and hearing) NLP software robot. It was replaced by a auditory-visual software "
-        . "AI robot. (archived project)",
+    new Project("m2", "mergen_red",
         array(
             new Link(
                 "https://github.com/fulcrum6378/pronouncer",
-                name: "Server Source (Python)", microType: "sameAs"),
+                name: $sp['serverPython'][$l], microType: "sameAs"),
             new Link(
                 "https://github.com/fulcrum6378/mergen_client",
-                name: "Android Source (Kotlin)", microType: "url"),
+                name: $sp['androidKotlin'][$l], microType: "url"),
         ),
         "SoftwareApplication", "Android, Windows, Linux, macOS",
         "Artificial Intelligence, AI, Logic, NLP"
     ),
-    new Project(
-        "mergen1", "mergen", "Mergen I",
-        "An NLP logical artificial intelligence software, aimed to think using pure digital text. "
-        . "It was replaced by an auditory one. (archived project)",
+    new Project("m1", "mergen",
         array(
             new Link(
                 "https://github.com/fulcrum6378/mergen_server",
-                name: "Software Source (Python)", microType: "sameAs"),
+                name: $sp['python'][$l], microType: "sameAs"),
         ),
         "SoftwareApplication", "Android, Windows, Linux, macOS",
         "Artificial Intelligence, AI, Logic, NLP"
     ),
-    new Project(
-        "friend_tracker", "friend_tracker", "Friend Tracker",
-        "Easily track your friends on the map. (archived project)",
+    new Project("ft", "friend_tracker",
         array(
             new Link(
                 "https://github.com/fulcrum6378/friend_tracker",
-                name: "Android Source (Java)", microType: "sameAs"),
+                name: $sp['androidJava'][$l], microType: "sameAs"),
         ),
         "MobileApplication", "Android", "Maps & Navigation, Communication, Social"
     ),
-    new Project(
-        "saam", "saam", "Saam",
-        "Stock market data collector based on MetaTrader5 (archived project)",
+    new Project("sm", "saam",
         array(
             new Link(
                 "https://github.com/fulcrum6378/saam",
-                name: "Software Source (Python)", microType: "sameAs"),
+                name: $sp['python'][$l], microType: "sameAs"),
         ),
         "SoftwareApplication", "Windows", "Finance, Business, Tools"
     ),
 );
-if (isset($_GET["fk"]) && $_GET["fk"] == "1") $projects[] = new Project(
-    "sexbook", "sexbook", "Sexbook",
-    "With this app, you can record any kind of sexual activities you had in the past and view their "
-    . "statistics, frequency, recency, etc.",
-    array(
-        new Link("https://play.google.com/store/apps/details?id=ir.mahdiparastesh.sexbook",
-            name: "Google Play", microType: "installUrl"),
-        new Link("https://galaxystore.samsung.com/detail/ir.mahdiparastesh.sexbook",
-            name: "Galaxy Store", microType: "installUrl"),
-        new Link("https://apkpure.com/p/ir.mahdiparastesh.sexbook",
-            title: "APKPure.com a third-party APK store", name: "APKPure", microType: "installUrl"),
-        new Link("https://mahdiparastesh.ir/welcome/privacy/sexbook.html",
-            name: "Privacy Policy", microType: "publishingPrinciples"),
-    ),
-    "MobileApplication", "Android", "Lifestyle, Events, Dating"
-);
+if (isset($_GET["fk"]) && $_GET["fk"] == "1") $projects[] =
+    new Project("sx", "sexbook",
+        array(
+            new Link("https://play.google.com/store/apps/details?id=ir.mahdiparastesh.sexbook",
+                name: $sp['googlePlay'][$l], microType: "installUrl"),
+            new Link("https://galaxystore.samsung.com/detail/ir.mahdiparastesh.sexbook",
+                name: $sp['galaxyStore'][$l], microType: "installUrl"),
+            new Link("https://apkpure.com/p/ir.mahdiparastesh.sexbook",
+                title: $sp['apkPureDesc'][$l], name: $sp['apkPure'][$l], microType: "installUrl"),
+            new Link("https://mahdiparastesh.ir/welcome/privacy/sexbook.html",
+                name: $sp['privacy'][$l], microType: "publishingPrinciples"),
+        ),
+        "MobileApplication", "Android", "Lifestyle, Events, Dating"
+    );
 
 // Collect the required data for the templates
 $data = array(
@@ -235,13 +217,11 @@ $data = array(
     'COUNTRY' => '',
 );
 global $s;
-$l = 0;
 foreach ($s as $key => $value) $data[$key] = $value[$l];
 
 // Render the template using Twig
 // For that, run $ cd welcome; ../.composer/composer require "twig/twig:^3.0" --ignore-platform-reqs
 $twig = new Environment(new FilesystemLoader(["welcome"]));
-$data["CONTENT"] = $twig->render('main.html', $data);
 echo $twig->render('temp.html', $data);
 
 

@@ -13,7 +13,6 @@
 }
 body {
     background: var(--CP);
-    font-family: input-mono, monospace;
 	overflow-y: hidden;
 }
 #loading {

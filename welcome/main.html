@@ -15,25 +15,21 @@
 
   <figure>
     <img src="{{ ROOT }}/img/mahdi.jpg" itemprop="image">
-    <figcaption><span itemprop="givenName">Mahdi</span> <span itemprop="familyName">Parastesh</span></figcaption>
+    <figcaption>
+      <span itemprop="givenName">{{ givenName }}</span> <span itemprop="familyName">{{ familyName }}</span>
+    </figcaption>
   </figure>
   <blockquote>
     <p itemprop="description">
       I'm a <b itemprop="jobTitle">Software Engineer</b> from Iran with 5 years of experience.
     </p>
     <p itemprop="knowsAbout">
-      I have 5 years of experience in developing Android apps and 3 years in Full-Stack development along with Flutter.
-      The programming languages I'm skilled at are<br><b>JavaScript, PHP, Java, Kotlin, Dart, Python and C++</b>.<br>
-      I develop Android apps using mere Java/Kotlin, or also for iOS using Flutter.
-      I know frameworks such as Django, Node.js, TensorFlow and Vulkan,
-      and I know DBMSes such as MySQL, SQLite and MongoDB.<br>
-      I practice Machine Learning sometimes using TensorFlow and sometimes using my own code.<br>
-      I'm also experienced in Linux, FreeBSD, OpenBSD and Windows Server.
+      {% autoescape false %}{{ bio }}{% endautoescape %}
     </p>
   </blockquote>
 
   <a href="{{ ROOT }}/cv.pdf" target="_blank" id="cv" itemprop="mainEntityOfPage"
-     itemtype="https://schema.org/AboutPage">View My CV</a>
+     itemtype="https://schema.org/AboutPage">{{ viewCv }}</a>
 
   <nav id="social">
     {% for link in SOCIAL %}<span
