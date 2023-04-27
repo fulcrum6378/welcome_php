@@ -1,4 +1,3 @@
-<!--suppress ALL -->
 <main class="container text-center" itemscope itemtype="https://schema.org/Person">
   <img src="{{ ROOT }}/img/en.svg" class="dropdown-toggle" id="langSelect" data-bs-toggle="dropdown">
   <ul class="dropdown-menu" aria-labelledby="langSelect" id="lang">
@@ -36,10 +35,44 @@
   <a href="{{ ROOT }}/cv.pdf" target="_blank" id="cv" itemprop="mainEntityOfPage"
      itemtype="https://schema.org/AboutPage">View My CV</a>
 
-  <nav id="social">{% autoescape false %}{{ SOCIAL }}{% endautoescape %}
+  <nav id="social">
+    {% for link in SOCIAL %}<span
+      class="social" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ link.title }}"
+      itemprop="mainEntityOfPage" itemscope itemtype="https://schema.org/ProfilePage">
+      <a href="{{ link.href }}" target="_blank" itemprop="sameAs">
+        <img src="{{ ROOT }}/img/{{ link.icon }}.svg" alt="{{ link.icon }}" itemprop="thumbnailUrl">
+      </a>
+    </span>
+    {% endfor %}
   </nav>
 
-  <div class="grid text-center" id="projects">{% autoescape false %}{{ PROJECTS }}{% endautoescape %}
+  <div class="grid text-center" id="projects">
+    {% for p in PROJECTS %}
+    <section class="grid-item {{ p.id }}" itemprop="subjectOf" itemscope
+             itemtype="https://schema.org/{{ p.microType }}">
+      <div class="grid-inner animated-button">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <img src="{{ ROOT }}/img/{{ p.icon }}_round.png" alt="{{ p.icon }}" class="icon" itemprop="logo">
+        <p class="projName" itemprop="name">{{ p.name }}</p>
+        <p class="projDesc" itemprop="disambiguatingDescription">
+          {{ p.desc }}
+        </p>
+        {% for a in p.anchors %}
+        <div class="anchor">
+          <hr>
+          <a href="{{ a.href }}" target="_blank" itemprop="{{ a.microType }}"
+             data-bs-toggle="tooltip" data-bs-placement="top" title="{{ a.title }}">{{ a.name }}</a>
+        </div>
+        {% endfor %}
+      </div>
+      <meta itemprop="operatingSystem" content="{{ p.os }}">
+      <meta itemprop="isAccessibleForFree" content="true">
+      <meta itemprop="applicationCategory" content="{{ p.category }}">
+    </section>
+    {% endfor %}
   </div>
 
   <meta itemprop="email" content="fulcrum522@hotmail.com">

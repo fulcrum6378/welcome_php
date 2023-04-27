@@ -60,14 +60,6 @@ $social = array(
     new Link("https://stackoverflow.com/users/10728785/mahdi-parastesh",
         "User Mahdi Parastesh - Stack Overflow", icon: "stackoverflow"),
 );
-$htmlSocial = "";
-foreach ($social as $link) $htmlSocial .= '
-    <span class="social" data-bs-toggle="tooltip" data-bs-placement="top" title="' . $link->title . '"
-          itemprop="mainEntityOfPage" itemscope itemtype="https://schema.org/ProfilePage">
-      <a href="' . $link->href . '" target="_blank" itemprop="sameAs">
-        <img src="{{ ROOT }}/img/' . $link->icon . '.svg" alt="' . $link->icon . '" itemprop="thumbnailUrl">
-      </a>
-    </span>';
 $projects = array(
     new Project(
         "instatools", "instatools", "InstaTools",
@@ -232,43 +224,15 @@ if (isset($_GET["fk"]) && $_GET["fk"] == "1") $projects[] = new Project(
     ),
     "MobileApplication", "Android", "Lifestyle, Events, Dating"
 );
-$htmlProjects = "";
-foreach ($projects as $p) {
-    $htmlAnchors = "";
-    foreach ($p->anchors as $a) $htmlAnchors .= '
-        <div class="anchor">
-          <hr>
-          <a href="' . $a->href . '" target="_blank" itemprop="' . $a->microType . '"
-             data-bs-toggle="tooltip" data-bs-placement="top" title="' . $a->title . '">' . $a->name . '</a>
-        </div>';
-    $htmlProjects .= '
-    <section class="grid-item ' . $p->id . '" itemprop="subjectOf"
-             itemscope itemtype="https://schema.org/' . $p->microType . '">
-      <div class="grid-inner animated-button">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <img src="{{ ROOT }}/img/' . $p->icon . '_round.png" alt="' . $p->icon . '" class="icon" itemprop="logo">
-        <p class="projName" itemprop="name">' . $p->name . '</p>
-        <p class="projDesc" itemprop="disambiguatingDescription">
-          ' . $p->desc . '
-        </p>' . $htmlAnchors . '
-      </div>
-      <meta itemprop="operatingSystem" content="' . $p->os . '">
-      <meta itemprop="isAccessibleForFree" content="true">
-      <meta itemprop="applicationCategory" content="' . $p->category . '">
-    </section>';
-}
 
 // Collect the required data for the templates
 $data = array(
     'ROOT' => '/welcome',
     'PAGE' => 'main',
+    'SOCIAL' => $social,
+    'PROJECTS' => $projects,
     'HELP' => $_GET['hl'] ?? '',
     'COUNTRY' => '',
-    'SOCIAL' => $htmlSocial,
-    'PROJECTS' => $htmlProjects,
 );
 global $s;
 $l = 0;
@@ -282,6 +246,6 @@ echo $twig->render('temp.html', $data);
 
 
 /*TODO:
- * List the Github Gists in a new grid
+ * List the GitHub Gists in a new grid
  * Add an arrow near the flag of UK and minimise the flags
  */
