@@ -1,4 +1,4 @@
-@import url(./tools/animated_button.css);
+@import url(./tools/animated_button.css); /* used outside here in main.html */
 
 :root {
     --CP: #2c2c2f;
@@ -13,40 +13,40 @@
 }
 body {
     background: var(--CP);
-	overflow-y: hidden;
+    overflow-y: hidden;
 }
 #loading {
-	text-align: center;
-	position: fixed;
-	top: calc(50% - 1rem);
+    text-align: center;
+    position: fixed;
+    top: calc(50% - 1rem);
     left: calc(50% - 1rem);
 }
 main {
-	padding-top: 25px;
+    padding-top: 25px;
     padding-bottom: 35px;
-	opacity: 0;
+    opacity: 0;
 }
 #lang {
-	min-width: 20px;
-	background: transparent;
-	padding-top: 10px;
+    min-width: 20px;
+    background: transparent;
+    padding-top: 10px;
 }
 #lang li {
-	padding: 0 0;
+    padding: 0 0;
 }
 #langSelect, #lang li img {
-	width: 80px;
-	height: 60px;
-	cursor: pointer;
-	transition: opacity 100ms;
+    width: 80px;
+    height: 60px;
+    cursor: pointer;
+    transition: opacity 100ms;
 }
 #langSelect:hover, #lang li img:hover {
-	opacity: 0.7;
+    opacity: 0.7;
 }
 #langSelect {
-	position: absolute;
-	top: 0;
-	left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 figure img {
     width: 200px;
@@ -63,15 +63,16 @@ figcaption, blockquote, #cv {
 figcaption {
     font-size: 25px;
     font-weight: bold;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     margin-top: 13px;
 }
 blockquote {
     font-size: 17px;
     font-weight: normal;
+    /*noinspection CssNonIntegerLengthInPixels*/
     letter-spacing: 0.5px;
     margin: 8px 5px 24px 5px;
-	line-height: 34px;
+    line-height: 34px;
 }
 #cv {
     font-size: 21px;
@@ -79,7 +80,7 @@ blockquote {
     cursor: pointer;
     text-decoration: none;
     margin: 10px 0;
-	color: #FFF;
+    color: #FFF;
 }
 #cv:hover {
     text-decoration: underline;
@@ -117,7 +118,7 @@ blockquote {
     text-decoration: none;
 }
 .grid-item:hover {
-	transform: scale(1.04);
+    transform: scale(1.04);
 }
 img.icon {
     width: 100px;
@@ -135,7 +136,7 @@ p.projDesc {
     margin-top: 5px;
     font-size: 14px;
     letter-spacing: 0;
-	line-height: 34px;
+    line-height: 34px;
 }
 .anchor hr {
     background-color: var(--CT);
@@ -164,9 +165,9 @@ p.projDesc {
         --columnWidth: 50%;
         --gutter: 6px;
     }
-	p.projDesc {
+    p.projDesc {
         font-size: 15px;
-	}
+    }
 }
 
 @media only screen and (max-width: 450px) {
@@ -179,15 +180,15 @@ p.projDesc {
         width: calc(var(--columnWidth) - (var(--pageHPadding) + var(--gutter) + var(--gutter)));
         margin: 0 var(--gutter) var(--gutter) var(--gutter);
     }
-	#social {
-        margin: 30px 75px;
+    #social {
+        margin: 30px 30px;
     }
-	.social a img {
+    .social a img {
         margin: 20px 0;
-	}
-	p.projDesc {
+    }
+    p.projDesc {
         font-size: 15px;
-	}
+    }
 }
 
 /*@media (prefers-color-scheme: dark) {

@@ -24,8 +24,6 @@
 <body {% autoescape false %}{{ BODY_ATTRS }}{% endautoescape %}>
 {{ include(PAGE ~ '.html') }}
 
-<input type="hidden" id="country" value="{{ COUNTRY }}">
-<input type="hidden" id="help" value="{{ LANG }}">
 <script src="{{ ROOT }}/{{ PAGE }}.js"></script>
 </body>
 </html>

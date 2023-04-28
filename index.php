@@ -48,19 +48,21 @@ class Link {
 }
 
 // Choose the language
-var lang = 5;
-switch ($_GET['hl'] ?? 'en') {
+$getHl = $_GET['hl'] ?? 'en';
+switch ($getHl) {
     case 'en':
+        $LANG = $getHl;
+        $l = 0;
         break;
     case 'fa':
+        $LANG = $getHl;
+        $l = 1;
         break;
     default:
+        $LANG = 'en';
+        $l = 0;
         break;
 }
-$l = match ($_GET['hl']) {
-    'fa' => 1,
-    default => 0,
-};
 
 // Process the current page: Main
 global $sp;
@@ -218,23 +220,24 @@ if (isset($_GET["fk"]) && $_GET["fk"] == "1") $projects[] =
 
 // Collect the required data for the templates
 $data = array(
-    'LANG' => $_GET['hl'] ?? 'en',
+    'LANG' => $LANG,
     'ROOT' => '/welcome',
     'PAGE' => 'main',
     'SOCIAL' => $social,
     'PROJECTS' => $projects,
-    'COUNTRY' => '',
 );
 global $s;
 foreach ($s as $key => $value) $data[$key] = $value[$l];
 
 // Render the template using Twig
 // For that, run $ cd welcome; ../.composer/composer require "twig/twig:^3.0" --ignore-platform-reqs
-$twig = new Environment(new FilesystemLoader(["welcome"]));
-echo $twig->render('temp.html', $data);
+echo (new Environment(new FilesystemLoader(["welcome"])))->render('temp.html', $data);
 
 
 /*TODO:
- * List the GitHub Gists in a new grid
+ * Masonry doesn't render in RTL properly
  * Add an arrow near the flag of UK and minimise the flags
+ *
+ * Notes:
+ * In case of SVG error, add ' version="1.1"' to the SVG tag and turn "img/png" to "image/png".
  */
