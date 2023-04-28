@@ -48,6 +48,15 @@ class Link {
 }
 
 // Choose the language
+var lang = 5;
+switch ($_GET['hl'] ?? 'en') {
+    case 'en':
+        break;
+    case 'fa':
+        break;
+    default:
+        break;
+}
 $l = match ($_GET['hl']) {
     'fa' => 1,
     default => 0,
@@ -209,11 +218,11 @@ if (isset($_GET["fk"]) && $_GET["fk"] == "1") $projects[] =
 
 // Collect the required data for the templates
 $data = array(
+    'LANG' => $_GET['hl'] ?? 'en',
     'ROOT' => '/welcome',
     'PAGE' => 'main',
     'SOCIAL' => $social,
     'PROJECTS' => $projects,
-    'HELP' => $_GET['hl'] ?? '',
     'COUNTRY' => '',
 );
 global $s;

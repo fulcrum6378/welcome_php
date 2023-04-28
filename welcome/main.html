@@ -1,5 +1,5 @@
 <main class="container text-center" itemscope itemtype="https://schema.org/Person">
-  <img src="{{ ROOT }}/img/en.svg" class="dropdown-toggle" id="langSelect" data-bs-toggle="dropdown">
+  <img src="{{ ROOT }}/img/{{ LANG }}.svg" class="dropdown-toggle" id="langSelect" data-bs-toggle="dropdown">
   <ul class="dropdown-menu" aria-labelledby="langSelect" id="lang">
     <li itemscope itemtype="https://schema.org/Language">
       <img src="{{ ROOT }}/img/en.svg" data-lang="en" itemprop="image">
@@ -21,10 +21,10 @@
   </figure>
   <blockquote>
     <p itemprop="description">
-      I'm a <b itemprop="jobTitle">Software Engineer</b> from Iran with 5 years of experience.
+      {% autoescape false %}{{ description }}{% endautoescape %}
     </p>
     <p itemprop="knowsAbout">
-      {% autoescape false %}{{ bio }}{% endautoescape %}
+      {% autoescape false %}{{ knowsAbout }}{% endautoescape %}
     </p>
   </blockquote>
 
@@ -71,7 +71,11 @@
     {% endfor %}
   </div>
 
+  {% if LANG != 'en' %}
+  <meta itemprop="jobTitle" content="Software Engineer">
+  {% endif %}
   <meta itemprop="email" content="fulcrum522@hotmail.com">
+  <meta itemprop="additionalName" content="Fulcrum">
   <meta itemprop="gender" content="https://schema.org/Male">
 </main>
 <div class="spinner-grow text-light" role="status" id="loading">

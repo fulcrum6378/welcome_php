@@ -4,9 +4,13 @@ $s = array(
         'Mahdi Parastesh',
         'مهدی پرستش',
     ],
-    'FONT' => [
-        'input-mono, monospace',
-        'IRANYekan',
+    'DIR' => [
+        'ltr',
+        'rtl'
+    ],
+    'BODY_ATTRS' => [
+        'style="font-family: input-mono, monospace;"',
+        'style="font-family: IRANYekan;"',
     ],
     'givenName' => [
         'Mahdi',
@@ -16,7 +20,12 @@ $s = array(
         'Parastesh',
         'پرستش',
     ],
-    'bio' => [
+    'description' => [
+        "I'm a <b itemprop=\"jobTitle\">Software Engineer</b> from Iran with 5 years of experience.",
+        "بنده مدت ۵ سال در برنامه نویسی اندروید و ۳ سال در کدنویسی فولستک (بک اند + فرانت اند) بعلاوه فلاتر 
+تجربه دارم.",
+    ],
+    'knowsAbout' => [
         "I have 5 years of experience in developing Android apps and 3 years in Full-Stack development along with 
 Flutter. The programming languages I'm skilled at are<br><b>JavaScript, PHP, Java, Kotlin, Dart, Python and C++</b>.
 <br>I develop Android apps using mere Java/Kotlin, or also for iOS using Flutter.
@@ -24,8 +33,7 @@ I know frameworks such as Django, Node.js, TensorFlow and Vulkan,
 and I know DBMSes such as MySQL, SQLite and MongoDB.<br>
 I practice Machine Learning sometimes using TensorFlow and sometimes using my own code.<br>
 I'm also experienced in Linux, FreeBSD, OpenBSD and Windows Server.",
-        "بنده مدت ۵ سال در برنامه نویسی اندروید و ۳ سال در کدنویسی فولستک (بک اند + فرانت اند) بعلاوه فلاتر 
-تجربه دارم. زبان های برنامه نویسی که در اونها مسلط هستم: <b>جاواسکریپت، PHP، جاوا، کاتلین، دارت، 
+        "زبان های برنامه نویسی که در اونها مسلط هستم: <b>جاواسکریپت، PHP، جاوا، کاتلین، دارت، 
 پایتون و سی پلاس پلاس</b> هستند. اپلیکیشن های اندرویدی چه با جاوا/کاتلین و چه با فلاتر بهمراه iOS 
 طراحی کردم.<br>فریمورک هایی که به اونها مسلط هستم: جنگو، Node.js، TensorFlow و Vulkan هستند 
 و با دیتابیس های MySQL، SQLite و MongoDB کار کردم.<br>گاهی اوقات به تمرین 

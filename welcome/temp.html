@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ LANG }}" dir="{{ DIR }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,11 +21,11 @@
   </script>
 </head>
 
-<body style="font-family: {{ FONT }};">
+<body {% autoescape false %}{{ BODY_ATTRS }}{% endautoescape %}>
 {{ include(PAGE ~ '.html') }}
 
 <input type="hidden" id="country" value="{{ COUNTRY }}">
-<input type="hidden" id="help" value="{{ HELP }}">
+<input type="hidden" id="help" value="{{ LANG }}">
 <script src="{{ ROOT }}/{{ PAGE }}.js"></script>
 </body>
 </html>
