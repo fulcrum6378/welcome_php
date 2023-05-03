@@ -58,6 +58,10 @@ switch ($getHl) {
         $LANG = $getHl;
         $l = 1;
         break;
+    case 'eo':
+        $LANG = $getHl;
+        $l = 2;
+        break;
     default:
         $LANG = 'en';
         $l = 0;

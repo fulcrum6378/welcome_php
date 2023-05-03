@@ -1,29 +1,49 @@
-<?php
+<?php /** @noinspection SpellCheckingInspection */
+
+$langs = [
+    [
+
+    ],
+    [],
+    [],
+];
+
 $s = array(
     'TITLE' => [
         'Mahdi Parastesh',
         'مهدی پرستش',
+        'Mahdi Parastesh',
     ],
     'DIR' => [
         'ltr',
-        'rtl'
+        'rtl',
+        'ltr',
     ],
     'BODY_ATTRS' => [
         'style="font-family: input-mono, monospace;"',
         'style="font-family: IRANYekan;"',
+        'style="font-family: input-mono, monospace;"',
+    ],
+    'loading' => [
+        'Loading...',
+        'در حال بارگذاری...',
+        'Ŝargante...'
     ],
     'givenName' => [
         'Mahdi',
         'مهدی',
+        'Mahdi',
     ],
     'familyName' => [
         'Parastesh',
         'پرستش',
+        'Parastesh',
     ],
     'description' => [
         "I'm a <b itemprop=\"jobTitle\">Software Engineer</b> from Iran with 5 years of experience.",
         "بنده مدت ۵ سال در برنامه نویسی اندروید و ۳ سال در کدنویسی فولستک (بک اند + فرانت اند) بعلاوه فلاتر 
 تجربه دارم.",
+        "Mi estas Programaro-Inĝeniero el Irano kun 5-jara sperto.",
     ],
     'knowsAbout' => [
         "I have 5 years of experience in developing Android apps and 3 years in Full-Stack development along with 
@@ -39,10 +59,18 @@ I'm also experienced in Linux, FreeBSD, OpenBSD and Windows Server.",
 و با دیتابیس های MySQL، SQLite و MongoDB کار کردم.<br>گاهی اوقات به تمرین 
 «یادگیری ماشینی» میپردازم چه با استفاده از تنسورفلو و چه با کد های خودم.<br>همچنین به سیستم 
 عامل های لینوکسی، FreeBSD، OpenBSD و Windows Server مسلط هستم.",
+        "Mi havas 5 jarojn da sperto pri evoluado de Android-aplikoj kaj 3 jarojn en Full-Stack-disvolviĝo kune kun
+Flutu. La programlingvoj pri kiuj mi estas lerta estas<br><b>JavaScript, PHP, Java, Kotlin, Dart, Python kaj C++</b>.
+<br>Mi disvolvas Android-aplikaĵojn uzante nur Java/Kotlin, aŭ ankaŭ por iOS uzante Flutter.
+Mi konas kadrojn kiel Django, Node.js, TensorFlow kaj Vulkan,
+kaj mi konas DBMS-ojn kiel MySQL, SQLite kaj MongoDB.<br>
+Mi praktikas Maŝinlernadon foje uzante TensorFlow kaj foje uzante mian propran kodon.<br>
+Mi ankaŭ estas sperta pri Linukso, FreeBSD, OpenBSD kaj Windows Server.",
     ],
     'viewCv' => [
         'View My CV',
         'مشاهده رزومه من',
+        'Rigardu Mian CV',
     ],
 );
 
@@ -50,172 +78,215 @@ $sp = array(
     'frName' => [
         'Fortuna',
         'فورتونا',
+        'Fortuna',
     ],
     'frDesc' => [
         "An open-source application of the Hedonist philosophy!",
         "نرم افزاری متن باز بر مبنای فلسفه «هدونیسم»",
+        "Malfermfonta aplikaĵo de la Hedonisma filozofio!",
     ],
     'ftName' => [
         'Friend Tracker',
         'ردیاب دوستان',
+        'Amiko Spuristo',
     ],
     'ftDesc' => [
         "Easily track your friends on the map. (archived project)",
         "دوستان خود را از روی نقشه ردیابی کنید. (پروژه آرشیو شده)",
+        "Facile spuru viajn amikojn sur la mapo. (arkivita projekto)",
     ],
     'itName' => [
         'InstaTools',
         'اینستاتولز',
+        'InstaTools',
     ],
     'itDesc' => [
         "Find unfollowers, download all saved posts, download any post and export DMs into HTML, PDF and TXT.",
         "آنفالویاب، دانلود هر گونه پست و استوری از اینستاگرام، دانلود پست های سیو شده
 و استخراج دایرکت ها در HTML ،PDF  و TXT.",
+        "Trovu nesekvantojn, elŝutu ĉiujn konservitajn afiŝojn, elŝutu ajnan afiŝon kaj eksportu DM-ojn en HTML,
+PDF kaj TXT.",
     ],
     'm1Name' => [
         'Mergen I',
         'مِرگِن ۱',
+        'Mergen I',
     ],
     'm1Desc' => [
         "An NLP logical artificial intelligence software, aimed to think using pure digital text.
 It was replaced by an auditory one. (archived project)",
         "یک نرم افزار هوش مصنوعی منطقی برای پردازش زبان انسانی؛ که قرار بود فقط از راه متن دیجیتال 
-تفکر کند و بعدا با یک نرم افزاری پردازش صوت جایگزین شد. (پروژه آرشیو شده)"
+تفکر کند و بعدا با یک نرم افزاری پردازش صوت جایگزین شد. (پروژه آرشیو شده)",
+        "NLP-softvaro pri logika artefarita inteligenteco, celita pensi uzante puran ciferecan tekston.
+Ĝi estis anstataŭigita per aŭda. (arkivita projekto)",
     ],
     'm2Name' => [
         'Mergen II (Pronouncer)',
         'مِرگِن ۲',
+        'Mergen II (Prononcisto)',
     ],
     'm2Desc' => [
         "An auditory (talking and hearing) NLP software robot. It was replaced by a auditory-visual software 
 AI robot. (archived project)",
         "یک ربات نرم افزاری صوتی (شنیداری و گفتاری) برای پردازش زبان انسان، 
-که بعدا با یک نرم افزار برای پردازش هم صوت و هم تصویر جایگزین شد. (پروژه آرشیو شده)"
+که بعدا با یک نرم افزار برای پردازش هم صوت و هم تصویر جایگزین شد. (پروژه آرشیو شده)",
+        "Aŭda (parolante kaj aŭdanta) NLP-programa roboto. Ĝi estis anstataŭigita per aŭd-vida programaro AI-roboto.
+(arkivita projekto)",
     ],
     'm3Name' => [
         'Mergen III',
         'مِرگِن ۳',
+        'Mergen III',
     ],
     'm3Desc' => [
-        "A multi-sensed artificially intelligent robot (AIR) software, which needed a server and (a) client(s). 
-        It was replaced by one which didn't need server and client. (archived project)",
+        "A multi-sensed artificially intelligent robot (AIR) software, which needed a server and (a) client(s).
+It was replaced by one which didn't need server and client. (archived project)",
         "یک نرم افزار رباتیک هوش مصنوعی برای پردازش چند نوع حس های متفاوت که به یک سرور و یک یا چند کلاینت نیاز داشت. 
-این روش بعدا با روشی جایگزین شد که به سرور و کلاینت نیاز نداشت. (پروژه آرشیو شده)"
+این روش بعدا با روشی جایگزین شد که به سرور و کلاینت نیاز نداشت. (پروژه آرشیو شده)",
+        "Plursensata artefarite inteligenta roboto (AERO) softvaro, kiu bezonis servilon kaj kliento(j)n.
+Ĝi estis anstataŭigita per unu kiu ne bezonis servilon kaj klienton. (arkivita projekto)",
     ],
     'm4Name' => [
         'Mergen IV',
         'مِرگِن ۴',
+        'Mergen IV',
     ],
     'm4Desc' => [
-        "A logical multi-sensed artificially intelligent robot (AIR) software. Temporarily designed for Android.
-(archived project)",
-        "یک ربات نرم افزاری هوش مصنوعی منطقی دارای حس های چندگانه که موقتا برای اندروید طراحی می شود.
-(پروژه آرشیو شده)"
+        "A logical multi-sensed artificially intelligent robot (AIR) software. Temporarily designed for Android.",
+        "یک ربات نرم افزاری هوش مصنوعی منطقی دارای حس های چندگانه که موقتا برای اندروید طراحی می شود.",
+        "Logika multsensita artefarite inteligenta roboto (AIR) softvaro. Provizore desegnita por Android.",
     ],
     'mgName' => [
         'Migratio',
         'میگراتیو',
+        'Migratio',
     ],
     'mgDesc' => [
         "A geographical statistical tool for determining someone's best destination for migration.",
         "یک ابزار جغرافی-آماری برای تعیین کردن بهترین مقصد مهاجرت افراد مختلف.",
+        "Geografia statistika ilo por determini la plej bonan celon de iu por migrado.",
     ],
     'smName' => [
         'Saam',
         'سام',
+        'Saam',
     ],
     'smDesc' => [
-        "Stock market data collector based on MetaTrader5 (archived project)",
+        "Stock market data collector based on MetaTrader 5 (archived project)",
         "گرداور و ذخیره کننده اطلاعات بورس، ساخته شده بر مبنای متاتریدر ۵ (پروژه آرشیو شده)",
+        "Kolektanto de datenmerkatoj bazita sur MetaTrader 5 (arkivita projekto)",
     ],
     'sxName' => [
         'Sexbook',
         'سکسبوک',
+        'Sekslibro',
     ],
     'sxDesc' => [
-        "With this app, you can record any kind of sexual activities you had in the past and view their "
-        . "statistics, frequency, recency, etc.",
+        "With this app, you can record any kind of sexual activities you had in the past and view their statistics,
+frequency, recency, etc.",
         "زندگی جنسی خود را ثبت کرده و آمارگیری و کنترل کنید.",
+        "Kun ĉi tiu aplikaĵo, vi povas registri ajnajn seksajn agadojn, kiujn vi havis en la pasinteco, kaj vidi iliajn
+statistikojn, oftecon, lastatempecon ktp.",
     ],
     'txName' => [
         'Telexporter',
         'تلکسپورتر',
+        'Teleksportisto',
     ],
     'txDesc' => [
         "Export your messages and call history into HTML, PDF or TXT file types.",
         "اس ام اس ها و تاریخچه تماس های خود را در قالب های وب، پی دی اف و تکست استخراج کنید.",
+        "Eksportu viajn mesaĝojn kaj voka historion al HTML, PDF aŭ TXT dosiertipoj.",
     ],
 
     'androidJava' => [
         'Android Source (Java)',
         'سورس اندروید (جاوا)',
+        'Android Fonto (Java)',
     ],
     'androidKotlin' => [
         'Android Source (Kotlin)',
         'سورس اندروید (کاتلین)',
+        'Android Fonto (Kotlin)',
     ],
     'apk' => [
         'Download for Android',
         'دانلود برای اندروید',
+        'Elŝutu por Android',
     ],
     'apkPure' => [
+        'APKPure',
         'APKPure',
         'APKPure',
     ],
     'apkPureDesc' => [
         'APKPure.com a third-party APK store',
         'یک وبسایت معروف دانلود اپ اندروید',
+        'APKPure.com triaparta APK-butiko',
     ],
     'bazaar' => [
         'Bazaar',
         'بازار',
+        'Bazaar',
     ],
     'bazaarDesc' => [
         'Iranian Android Bazaar Store',
         'فروشگاه اپلیکیشن ایرانی بازار',
+        'Irana Android Bazaar Store',
     ],
     'flutter' => [
         'Flutter Source',
         'سورس فلاتر',
+        'Flutter Fonto',
     ],
     'galaxyStore' => [
         'Galaxy Store',
-        'گلکسی استور'
+        'گلکسی استور',
+        'Galaxy Vendejo',
     ],
     'googlePlay' => [
         'Google Play',
-        'گوگل پلی'
+        'گوگل پلی',
+        'Google Play',
     ],
     'myket' => [
         'Myket',
         'مایکت',
+        'Myket',
     ],
     'myketDesc' => [
         'Iranian Android Myket Store',
         'فروشگاه اپلیکیشن ایرانی مایکت',
+        'Irana Android Myket Store',
     ],
     'privacy' => [
         'Privacy Policy',
         'سیاست حریم خصوصی',
+        'Privateca Politiko',
     ],
     'serverPython' => [
         'Server Source (Python)',
         'سورس سرور (پایتون)',
+        'Servila Fonto (Python)',
     ],
     'python' => [
         'Software Source (Python)',
-        'سورس نرم افزار (پایتون)'
+        'سورس نرم افزار (پایتون)',
+        'Programaro Fonto (Python)',
     ],
     'website' => [
         'Website',
         'وبسایت',
+        'Retejo',
     ],
     'websiteDemo' => [
         'Website (Demo)',
         'وبسایت (دمو)',
+        'Retejo (Demonstraĵo)',
     ],
     'wpTheme' => [
         'Wordpress Theme',
         'تم وردپرس',
+        'Wordpress Temo',
     ],
 );

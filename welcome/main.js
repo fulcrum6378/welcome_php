@@ -1,5 +1,6 @@
 // noinspection JSUnresolvedFunction
 
+// Initialise Masonry
 window.onload = function () { // Initialize the Grid view
     $('.grid').masonry({itemSelector: '.grid-item'});
 
@@ -8,6 +9,7 @@ window.onload = function () { // Initialize the Grid view
     $("main").animate({opacity: 1}, 636);
 };
 
+// Change language
 $("#lang li img").on('click', function () {
     let hl = $(this).attr("data-lang");
     let goTo = document.location.toString();
