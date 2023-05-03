@@ -1,21 +1,12 @@
 <main class="container text-center" itemscope itemtype="https://schema.org/Person">
   <img src="{{ ROOT }}/img/{{ LANG }}.svg" class="dropdown-toggle" id="langSelect" data-bs-toggle="dropdown">
   <ul class="dropdown-menu" aria-labelledby="langSelect" id="lang">
-    <li itemscope itemtype="https://schema.org/Language">
-      <img src="{{ ROOT }}/img/en.svg" data-lang="en" itemprop="image">
-      <meta itemprop="name" content="English">
-      <meta itemprop="identifier" content="eng">
+    {% for l in LANGS %}<li itemscope itemtype="https://schema.org/Language">
+      <img src="{{ ROOT }}/img/{{ l.id }}.svg" data-lang="{{ l.id }}" itemprop="image">
+      <meta itemprop="name" content="{{ l.metaName }}">
+      <meta itemprop="identifier" content="{{ l.metaId }}">
     </li>
-    <li itemscope itemtype="https://schema.org/Language">
-      <img src="{{ ROOT }}/img/fa.svg" data-lang="fa" itemprop="image">
-      <meta itemprop="name" content="Persian">
-      <meta itemprop="identifier" content="pes">
-    </li>
-    <li itemscope itemtype="https://schema.org/Language">
-      <img src="{{ ROOT }}/img/eo.svg" data-lang="fa" itemprop="image">
-      <meta itemprop="name" content="Persian">
-      <meta itemprop="identifier" content="pes">
-    </li>
+    {% endfor %}
   </ul>
 
   <figure>
@@ -48,8 +39,7 @@
   </nav>
 
   <div class="grid" id="projects">
-    {% for p in PROJECTS %}
-    <section class="grid-item {{ p.id }}" itemprop="subjectOf" itemscope
+    {% for p in PROJECTS %}<section class="grid-item {{ p.id }}" itemprop="subjectOf" itemscope
              itemtype="https://schema.org/{{ p.microType }}">
       <div class="grid-inner animated-button">
         <span></span>
@@ -61,8 +51,7 @@
         <p class="projDesc" itemprop="disambiguatingDescription">
           {{ p.desc }}
         </p>
-        {% for a in p.anchors %}
-        <div class="anchor">
+        {% for a in p.anchors %}<div class="anchor">
           <hr>
           <a href="{{ a.href }}" target="_blank" itemprop="{{ a.microType }}"
              data-bs-toggle="tooltip" data-bs-placement="top" title="{{ a.title }}">{{ a.name }}</a>

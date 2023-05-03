@@ -2,10 +2,20 @@
 
 $langs = [
     [
-
+        'id' => 'en',
+        'metaName' => 'English',
+        'metaId' => 'eng',
     ],
-    [],
-    [],
+    [
+        'id' => 'fa',
+        'metaName' => 'Persian',
+        'metaId' => 'pes',
+    ],
+    [
+        'id' => 'eo',
+        'metaName' => 'Esperanto',
+        'metaId' => 'epo',
+    ],
 ];
 
 $s = array(

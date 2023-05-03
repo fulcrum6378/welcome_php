@@ -48,28 +48,17 @@ class Link {
 }
 
 // Choose the language
+global $langs, $s, $sp;
+$l = 0;
+$LANG = 'en';
 $getHl = $_GET['hl'] ?? 'en';
-switch ($getHl) {
-    case 'en':
+for ($i = 0; $i < count($langs); $i++)
+    if ($getHl == $langs[$i]['id']) {
         $LANG = $getHl;
-        $l = 0;
-        break;
-    case 'fa':
-        $LANG = $getHl;
-        $l = 1;
-        break;
-    case 'eo':
-        $LANG = $getHl;
-        $l = 2;
-        break;
-    default:
-        $LANG = 'en';
-        $l = 0;
-        break;
-}
+        $l = $i;
+    }
 
 // Process the current page: Main
-global $sp;
 $social = array(
     new Link("https://www.facebook.com/mpg973", "Mahdi Prs", icon: "facebook"),
     /*new Link("https://www.instagram.com/fulcrum6378/",
@@ -224,13 +213,13 @@ if (isset($_GET["fk"]) && $_GET["fk"] == "1") $projects[] =
 
 // Collect the required data for the templates
 $data = array(
+    'LANGS' => $langs,
     'LANG' => $LANG,
     'ROOT' => '/welcome',
     'PAGE' => 'main',
     'SOCIAL' => $social,
     'PROJECTS' => $projects,
 );
-global $s;
 foreach ($s as $key => $value) $data[$key] = $value[$l];
 
 // Render the template using Twig
