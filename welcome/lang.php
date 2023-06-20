@@ -101,9 +101,22 @@ $sp = array(
         'Amiko Spuristo',
     ],
     'ftDesc' => [
-        "Easily track your friends on the map. (archived project)",
-        "دوستان خود را از روی نقشه ردیابی کنید. (پروژه آرشیو شده)",
-        "Facile spuru viajn amikojn sur la mapo. (arkivita projekto)",
+        "Easily track your friends on the map.",
+        "دوستان خود را از روی نقشه ردیابی کنید.",
+        "Facile spuru viajn amikojn sur la mapo.",
+    ],
+    'hcName' => [
+        "HomeChat",
+        "چت روی وای فای",
+        "HejmaBabilejo",
+    ],
+    'hcDesc' => [
+        "An advanced and modern LAN messenger (usually used for home or businesses).
+Its design is based on Material3. The app is currently left incomplete.",
+        "یک پیامرسان پیشرفته و مدرن برای چت روی شبکه محلی (معمولا وای فای خانه یا شرکت).
+طراحی اپ بر اساس متریال۳ است. این اپ فعلا ناقص است.",
+        "Altnivela kaj moderna LAN-mesaĝo (kutime uzata por hejmo aŭ entreprenoj).
+Ĝia dezajno baziĝas sur Material3. La programo estas nuntempe lasita nekompleta.",
     ],
     'itName' => [
         'InstaTools',
@@ -124,11 +137,11 @@ PDF kaj TXT.",
     ],
     'm1Desc' => [
         "An NLP logical artificial intelligence software, aimed to think using pure digital text.
-It was replaced by an auditory one. (archived project)",
+It was replaced by an auditory one.",
         "یک نرم افزار هوش مصنوعی منطقی برای پردازش زبان انسانی؛ که قرار بود فقط از راه متن دیجیتال 
-تفکر کند و بعدا با یک نرم افزاری پردازش صوت جایگزین شد. (پروژه آرشیو شده)",
+تفکر کند و بعدا با یک نرم افزاری پردازش صوت جایگزین شد.",
         "NLP-softvaro pri logika artefarita inteligenteco, celita pensi uzante puran ciferecan tekston.
-Ĝi estis anstataŭigita per aŭda. (arkivita projekto)",
+Ĝi estis anstataŭigita per aŭda.",
     ],
     'm2Name' => [
         'Mergen II (Pronouncer)',
@@ -137,9 +150,9 @@ It was replaced by an auditory one. (archived project)",
     ],
     'm2Desc' => [
         "An auditory (talking and hearing) NLP software robot. It was replaced by a auditory-visual software 
-AI robot. (archived project)",
+AI robot.",
         "یک ربات نرم افزاری صوتی (شنیداری و گفتاری) برای پردازش زبان انسان، 
-که بعدا با یک نرم افزار برای پردازش هم صوت و هم تصویر جایگزین شد. (پروژه آرشیو شده)",
+که بعدا با یک نرم افزار برای پردازش هم صوت و هم تصویر جایگزین شد.",
         "Aŭda (parolante kaj aŭdanta) NLP-programa roboto. Ĝi estis anstataŭigita per aŭd-vida programaro AI-roboto.
 (arkivita projekto)",
     ],
@@ -150,11 +163,11 @@ AI robot. (archived project)",
     ],
     'm3Desc' => [
         "A multi-sensed artificially intelligent robot (AIR) software, which needed a server and (a) client(s).
-It was replaced by one which didn't need server and client. (archived project)",
+It was replaced by one which didn't need server and client.",
         "یک نرم افزار رباتیک هوش مصنوعی برای پردازش چند نوع حس های متفاوت که به یک سرور و یک یا چند کلاینت نیاز داشت. 
-این روش بعدا با روشی جایگزین شد که به سرور و کلاینت نیاز نداشت. (پروژه آرشیو شده)",
+این روش بعدا با روشی جایگزین شد که به سرور و کلاینت نیاز نداشت.",
         "Plursensata artefarite inteligenta roboto (AERO) softvaro, kiu bezonis servilon kaj kliento(j)n.
-Ĝi estis anstataŭigita per unu kiu ne bezonis servilon kaj klienton. (arkivita projekto)",
+Ĝi estis anstataŭigita per unu kiu ne bezonis servilon kaj klienton.",
     ],
     'm4Name' => [
         'Mergen IV',
@@ -182,9 +195,9 @@ It was replaced by one which didn't need server and client. (archived project)",
         'Saam',
     ],
     'smDesc' => [
-        "Stock market data collector based on MetaTrader 5 (archived project)",
-        "گرداور و ذخیره کننده اطلاعات بورس، ساخته شده بر مبنای متاتریدر ۵ (پروژه آرشیو شده)",
-        "Kolektanto de datenmerkatoj bazita sur MetaTrader 5 (arkivita projekto)",
+        "Stock market data collector based on MetaTrader 5",
+        "گرداور و ذخیره کننده اطلاعات بورس، ساخته شده بر مبنای متاتریدر ۵",
+        "Kolektanto de datenmerkatoj bazita sur MetaTrader 5",
     ],
     'sxName' => [
         'Sexbook',
@@ -218,6 +231,11 @@ statistikojn, oftecon, lastatempecon ktp.",
         'Android Source (Kotlin)',
         'سورس اندروید (کاتلین)',
         'Android Fonto (Kotlin)',
+    ],
+    'androidC++' => [
+        'Android Source (C++)',
+        'سورس اندروید (سی پلاس پلاس)',
+        'Android Fonto (C++)',
     ],
     'apk' => [
         'Download for Android',
@@ -298,5 +316,11 @@ statistikojn, oftecon, lastatempecon ktp.",
         'Wordpress Theme',
         'تم وردپرس',
         'Wordpress Temo',
+    ],
+
+    'archived' => [
+        ' (archived)', //  project
+        ' (آرشیو شده)', // پروژه
+        ' (arkivita)', //  projekto
     ],
 );

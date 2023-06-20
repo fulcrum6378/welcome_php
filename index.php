@@ -18,12 +18,15 @@ class Project {
     public string $os;
     public string $category;
 
-    function __construct($id, $icon, $anchors, $microType, $os, $category) {
+    function __construct(
+        string $id, string $icon, array $anchors, string $microType, string $os, string $category, bool $archived
+    ) {
         global $l, $sp;
         $this->id = $id;
         $this->icon = $icon;
         $this->name = $sp[$id . 'Name'][$l];
         $this->desc = $sp[$id . 'Desc'][$l];
+        if ($archived) $this->desc .= $sp['archived'][$l];
         $this->anchors = $anchors;
         $this->microType = $microType;
         $this->os = $os;
@@ -38,7 +41,9 @@ class Link {
     public ?string $icon;
     public ?string $microType;
 
-    function __construct($href, $title = "", $name = null, $icon = null, $microType = null) {
+    function __construct(
+        string $href, string $title = "", ?string $name = null, ?string $icon = null, ?string $microType = null
+    ) {
         $this->href = $href;
         $this->title = $title;
         $this->name = $name;
@@ -60,18 +65,43 @@ for ($i = 0; $i < count($langs); $i++)
 
 // Process the current page: Main
 $social = array(
-    new Link("https://www.facebook.com/mpg973", "Mahdi Prs", icon: "facebook"),
-    /*new Link("https://www.instagram.com/fulcrum6378/",
-        "Mahdi Parastesh (@fulcrum6378) • Instagram photos and videos", icon: "instagram"),*/
-    /*new Link("https://twitter.com/fulcrum6378", "Mahdi Parastesh (@fulcrum6378) / Twitter", icon: "twitter"),*/
-    new Link("https://github.com/fulcrum6378", "fulcrum6378 (Mahdi Parastesh) · GitHub", icon: "github"),
-    new Link("https://www.linkedin.com/in/fulcrum6378/", "Mahdi Parastesh | LinkedIn", icon: "linkedin"),
+    new Link("https://github.com/fulcrum6378", "fulcrum6378 (Mahdi Parastesh)", icon: "github"),
     new Link("https://play.google.com/store/apps/dev?id=8797895762316770334",
         "Android Apps by Mahdi Parastesh on Google Play", icon: "google_play"),
     new Link("https://stackoverflow.com/users/10728785/mahdi-parastesh",
         "User Mahdi Parastesh - Stack Overflow", icon: "stackoverflow"),
+
+    new Link("https://www.linkedin.com/in/fulcrum6378/", "Mahdi Parastesh | LinkedIn", icon: "linkedin"),
+    new Link("https://www.instagram.com/fulcrum6378/",
+        "MAHDI (@fulcrum6378) • Instagram photos and videos", icon: "instagram"),
+    /*new Link("https://twitter.com/fulcrum6378", "Fulcrum (@fulcrum6378) / Twitter", icon: "twitter"),*/
+    new Link("https://www.facebook.com/mpg973", "Mahdi Prs", icon: "facebook"),
 );
+$sexbook_pos = 3;
 $projects = array(
+    new Project("m4", "mergen_iv",
+        array(
+            new Link("https://github.com/fulcrum6378/mergen_android",
+                name: $sp['androidC++'][$l], microType: "sameAs"),
+        ),
+        "SoftwareApplication", "Android", "AI, Logic, Robot", false,
+    ),
+    new Project('fr', "fortuna",
+        array(
+            new Link("https://github.com/fulcrum6378/fortuna",
+                name: $sp['androidKotlin'][$l], microType: "url"),
+            new Link("https://play.google.com/store/apps/details?id=ir.mahdiparastesh.fortuna.gregorian",
+                name: $sp['googlePlay'][$l], microType: "installUrl"),
+            new Link("https://github.com/fulcrum6378/fortuna_flutter",
+                name: $sp['flutter'][$l], microType: "url"),
+            /*new Link("https://fortuna.mahdiparastesh.ir/",
+                name: $sp['websiteDemo'][$l], microType: "sameAs"),*/
+            new Link("https://mahdiparastesh.ir/welcome/privacy/fortuna.html",
+                name: $sp['privacy'][$l], microType: "publishingPrinciples"),
+        ),
+        "SoftwareApplication", "Android, Web, iOS", "Philosophy, Lifestyle, Events, Health",
+        false,
+    ),
     new Project('it', "instatools",
         array(
             new Link("https://mahdiparastesh.ir/misc/instatools.apk",
@@ -83,27 +113,7 @@ $projects = array(
             /*new Link("https://mahdiparastesh.ir/welcome/privacy/instatools.html",
                 name: $sp['privacy'][$l], microType: "publishingPrinciples"),*/
         ),
-        "MobileApplication", "Android", "Tools, Personalisation"
-    ),
-    new Project('fr', "fortuna",
-        array(
-            new Link(
-                "https://github.com/fulcrum6378/fortuna",
-                name: $sp['androidKotlin'][$l], microType: "url"),
-            new Link(
-                "https://play.google.com/store/apps/details?id=ir.mahdiparastesh.fortuna.gregorian",
-                name: $sp['googlePlay'][$l], microType: "installUrl"),
-            new Link(
-                "https://github.com/fulcrum6378/fortuna_flutter",
-                name: $sp['flutter'][$l], microType: "url"),
-            /*new Link(
-                "https://fortuna.mahdiparastesh.ir/",
-                name: $sp['websiteDemo'][$l], microType: "sameAs"),*/
-            new Link(
-                "https://mahdiparastesh.ir/welcome/privacy/fortuna.html",
-                name: $sp['privacy'][$l], microType: "publishingPrinciples"),
-        ),
-        "SoftwareApplication", "Android, Web, iOS", "Philosophy, Lifestyle, Events, Health"
+        "MobileApplication", "Android", "Tools, Personalisation", false,
     ),
     new Project('tx', "telexporter",
         array(
@@ -116,7 +126,7 @@ $projects = array(
             new Link("https://mahdiparastesh.ir/welcome/privacy/telexporter.html",
                 name: $sp['privacy'][$l], microType: "publishingPrinciples"),
         ),
-        "MobileApplication", "Android", "Tools"
+        "MobileApplication", "Android", "Tools", false,
     ),
     new Project("mg", "migratio",
         array(
@@ -130,6 +140,8 @@ $projects = array(
                 title: $sp['bazaarDesc'][$l], name: $sp['bazaar'][$l], microType: "installUrl"),
             new Link("https://myket.ir/app/ir.mahdiparastesh.migratio",
                 title: $sp['myketDesc'][$l], name: $sp['myket'][$l], microType: "installUrl"),
+            new Link("https://apkpure.com/p/ir.mahdiparastesh.migratio",
+                title: $sp['apkPureDesc'][$l], name: $sp['apkPure'][$l], microType: "installUrl"),
             new Link("https://github.com/fulcrum6378/migratio_android",
                 name: $sp['androidKotlin'][$l], microType: "url"),
             new Link("https://github.com/fulcrum6378/migratio",
@@ -137,66 +149,59 @@ $projects = array(
             new Link("https://mahdiparastesh.ir/welcome/privacy/migratio.html",
                 name: $sp['privacy'][$l], microType: "publishingPrinciples"),
         ),
-        "SoftwareApplication", "Android, Web", "Tools, Travel, Migration"
-    ),
-    new Project("m4", "mergen_iv",
-        array(
-            new Link("https://github.com/fulcrum6378/mergen_android",
-                name: $sp['androidJava'][$l], microType: "sameAs"),
-        ),
-        "SoftwareApplication", "Android", "AI, Logic, Robot"
+        "SoftwareApplication", "Android, Web", "Tools, Travel, Migration", true,
     ),
     new Project("m3", "mergen",
         array(
-            new Link(
-                "https://github.com/fulcrum6378/mergen_server",
+            new Link("https://github.com/fulcrum6378/mergen_server",
                 name: $sp['serverPython'][$l], microType: "sameAs"),
-            new Link(
-                "https://github.com/fulcrum6378/mergen_client",
+            new Link("https://github.com/fulcrum6378/mergen_client",
                 name: $sp['androidKotlin'][$l], microType: "url"),
         ),
         "SoftwareApplication", "Android, Windows, Linux, macOS",
-        "Artificial Intelligence, AI, Logic, NLP"
+        "Artificial Intelligence, AI, Logic, NLP", true,
     ),
     new Project("m2", "mergen_red",
         array(
-            new Link(
-                "https://github.com/fulcrum6378/pronouncer",
+            new Link("https://github.com/fulcrum6378/pronouncer",
                 name: $sp['serverPython'][$l], microType: "sameAs"),
-            new Link(
-                "https://github.com/fulcrum6378/mergen_client",
+            new Link("https://github.com/fulcrum6378/mergen_client",
                 name: $sp['androidKotlin'][$l], microType: "url"),
         ),
         "SoftwareApplication", "Android, Windows, Linux, macOS",
-        "Artificial Intelligence, AI, Logic, NLP"
+        "Artificial Intelligence, AI, Logic, NLP", true,
     ),
     new Project("m1", "mergen",
         array(
-            new Link(
-                "https://github.com/fulcrum6378/mergen_server",
+            new Link("https://github.com/fulcrum6378/mergen_server",
                 name: $sp['python'][$l], microType: "sameAs"),
         ),
         "SoftwareApplication", "Android, Windows, Linux, macOS",
-        "Artificial Intelligence, AI, Logic, NLP"
+        "Artificial Intelligence, AI, Logic, NLP", true,
+    ),
+    new Project("hc", "homechat",
+        array(
+            new Link("https://github.com/fulcrum6378/homechat/",
+                name: $sp['androidKotlin'][$l], microType: "sameAs"),
+        ),
+        "MobileApplication", "Android", "Communication, Social, Tools, LAN, Network", true,
     ),
     new Project("ft", "friend_tracker",
         array(
-            new Link(
-                "https://github.com/fulcrum6378/friend_tracker",
+            new Link("https://github.com/fulcrum6378/friend_tracker",
                 name: $sp['androidJava'][$l], microType: "sameAs"),
         ),
-        "MobileApplication", "Android", "Maps & Navigation, Communication, Social"
+        "MobileApplication", "Android", "Maps & Navigation, Communication, Social", true,
     ),
     new Project("sm", "saam",
         array(
-            new Link(
-                "https://github.com/fulcrum6378/saam",
+            new Link("https://github.com/fulcrum6378/saam",
                 name: $sp['python'][$l], microType: "sameAs"),
         ),
-        "SoftwareApplication", "Windows", "Finance, Business, Tools"
+        "SoftwareApplication", "Windows", "Finance, Business, Tools", true,
     ),
 );
-if (isset($_GET["fk"]) && $_GET["fk"] == "1") $projects[] =
+if (isset($_GET["fk"]) && $_GET["fk"] == "1") array_splice($projects, $sexbook_pos, 0, array(
     new Project("sx", "sexbook",
         array(
             new Link("https://play.google.com/store/apps/details?id=ir.mahdiparastesh.sexbook",
@@ -208,8 +213,9 @@ if (isset($_GET["fk"]) && $_GET["fk"] == "1") $projects[] =
             new Link("https://mahdiparastesh.ir/welcome/privacy/sexbook.html",
                 name: $sp['privacy'][$l], microType: "publishingPrinciples"),
         ),
-        "MobileApplication", "Android", "Lifestyle, Events, Dating"
-    );
+        "MobileApplication", "Android", "Lifestyle, Events, Dating", false,
+    )
+));
 
 // Collect the required data for the templates
 $data = array(
