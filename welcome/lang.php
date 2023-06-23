@@ -50,29 +50,29 @@ $s = array(
         'Parastesh',
     ],
     'description' => [
-        "I'm a <b itemprop=\"jobTitle\">Software Engineer</b> from Iran with 5 years of experience.",
-        "بنده مدت ۵ سال در برنامه نویسی اندروید و ۳ سال در کدنویسی فولستک (بک اند + فرانت اند) بعلاوه فلاتر 
+        "I'm a <b itemprop=\"jobTitle\">Software Engineer</b> from Iran with 6 years of experience.",
+        "بنده مدت ۵ سال در برنامه نویسی اندروید و ۴ سال در کدنویسی فولستک (بک اند + فرانت اند) بعلاوه فلاتر 
 تجربه دارم.",
-        "Mi estas Programaro-Inĝeniero el Irano kun 5-jara sperto.",
+        "Mi estas Programaro-Inĝeniero el Irano kun 6-jara sperto.",
     ],
     'knowsAbout' => [
-        "I have 5 years of experience in developing Android apps and 3 years in Full-Stack development along with 
+        "I have 5 years of experience in developing Android apps and 4 years in Full-Stack development along with 
 Flutter. The programming languages I'm skilled at are<br><b>JavaScript, PHP, Java, Kotlin, Dart, Python and C++</b>.
 <br>I develop Android apps using mere Java/Kotlin, or also for iOS using Flutter.
-I know frameworks such as Django, Node.js, TensorFlow and Vulkan,
+I know frameworks such as Django, Node.js, TensorFlow, Vulkan and PyTorch,
 and I know DBMSes such as MySQL, SQLite and MongoDB.<br>
-I practice Machine Learning sometimes using TensorFlow and sometimes using my own code.<br>
+I practice Machine Learning sometimes using PyTorch and sometimes using my own code.<br>
 I'm also experienced in Linux, FreeBSD, OpenBSD and Windows Server.",
         "زبان های برنامه نویسی که در اونها مسلط هستم: <b>جاواسکریپت، PHP، جاوا، کاتلین، دارت، 
 پایتون و سی پلاس پلاس</b> هستند. اپلیکیشن های اندرویدی چه با جاوا/کاتلین و چه با فلاتر بهمراه iOS 
-طراحی کردم.<br>فریمورک هایی که به اونها مسلط هستم: جنگو، Node.js، TensorFlow و Vulkan هستند 
+طراحی کردم.<br>فریمورک هایی که به اونها مسلط هستم: جنگو، Node.js، TensorFlow، Vulkan و PyTorch هستند 
 و با دیتابیس های MySQL، SQLite و MongoDB کار کردم.<br>گاهی اوقات به تمرین 
-«یادگیری ماشینی» میپردازم چه با استفاده از تنسورفلو و چه با کد های خودم.<br>همچنین به سیستم 
+«یادگیری ماشینی» میپردازم چه با استفاده از پایتورچ و چه با کد های خودم.<br>همچنین به سیستم 
 عامل های لینوکسی، FreeBSD، OpenBSD و Windows Server مسلط هستم.",
-        "Mi havas 5 jarojn da sperto pri evoluado de Android-aplikoj kaj 3 jarojn en Full-Stack-disvolviĝo kune kun
+        "Mi havas 5 jarojn da sperto pri evoluado de Android-aplikoj kaj 4 jarojn en Full-Stack-disvolviĝo kune kun
 Flutu. La programlingvoj pri kiuj mi estas lerta estas<br><b>JavaScript, PHP, Java, Kotlin, Dart, Python kaj C++</b>.
 <br>Mi disvolvas Android-aplikaĵojn uzante nur Java/Kotlin, aŭ ankaŭ por iOS uzante Flutter.
-Mi konas kadrojn kiel Django, Node.js, TensorFlow kaj Vulkan,
+Mi konas kadrojn kiel Django, Node.js, TensorFlow, Vulkan kaj PyTorch,
 kaj mi konas DBMS-ojn kiel MySQL, SQLite kaj MongoDB.<br>
 Mi praktikas Maŝinlernadon foje uzante TensorFlow kaj foje uzante mian propran kodon.<br>
 Mi ankaŭ estas sperta pri Linukso, FreeBSD, OpenBSD kaj Windows Server.",
