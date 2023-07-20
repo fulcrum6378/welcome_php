@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Test Index" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/index.php">
+    <CommandLine>
+      <PhpTestInterpreterSettings>
+        <option name="interpreterName" value="C:\Users\fulcr\AppData\Local\Programs\PHP8.2.5\php.exe" />
+      </PhpTestInterpreterSettings>
+    </CommandLine>
+    <method v="2" />
+  </configuration>
+</component>
