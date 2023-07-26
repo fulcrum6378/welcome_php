@@ -68,13 +68,11 @@ $social = array(
     new Link("https://github.com/fulcrum6378", "fulcrum6378 (Mahdi Parastesh)", icon: "github"),
     new Link("https://www.linkedin.com/in/fulcrum6378/", "Mahdi Parastesh | LinkedIn", icon: "linkedin"),
     new Link("https://www.instagram.com/fulcrum6378/",
-        "MAHDI (@fulcrum6378) • Instagram photos and videos", icon: "instagram"),
+        "Mahdi Parastesh (@fulcrum6378) • Instagram photos and videos", icon: "instagram"),
     new Link("https://play.google.com/store/apps/dev?id=8797895762316770334",
         "Android Apps by Mahdi Parastesh on Google Play", icon: "google_play"),
     new Link("https://stackoverflow.com/users/10728785/mahdi-parastesh",
         "User Mahdi Parastesh - Stack Overflow", icon: "stackoverflow"),
-    //new Link("https://twitter.com/fulcrum6378", "Fulcrum (@fulcrum6378) / Twitter", icon: "twitter"),
-    //new Link("https://www.facebook.com/mpg973", "Mahdi Prs", icon: "facebook"),
 );
 $sexbook_pos = 3;
 $projects = array(
