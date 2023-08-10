@@ -16,8 +16,14 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7F0XJVSY1P"></script>
   <script>
       window.dataLayer = window.dataLayer || [];
-      dataLayer.push('js', new Date());
-      dataLayer.push('config', 'G-7F0XJVSY1P');
+
+      // don't take it out of the function
+      function gtag() {
+          dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+      gtag('config', 'G-7F0XJVSY1P');
   </script>
 </head>
 
