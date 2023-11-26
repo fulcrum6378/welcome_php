@@ -78,8 +78,8 @@ $sexbook_pos = 3;
 $projects = array(
     new Project("m4", "mergen_iv",
         array(
-            new Link("https://github.com/fulcrum6378/mergen_android",
-                name: $sp['androidC++'][$l], microType: "sameAs"),
+            new Link("https://github.com/fulcrum6378/mergen_linux",
+                name: $sp['softwareC++'][$l], microType: "sameAs"),
         ),
         "SoftwareApplication", "Android", "AI, Logic, Robot", false,
     ),
@@ -171,7 +171,7 @@ $projects = array(
     new Project("m1", "mergen",
         array(
             new Link("https://github.com/fulcrum6378/mergen_server",
-                name: $sp['python'][$l], microType: "sameAs"),
+                name: $sp['softwarePython'][$l], microType: "sameAs"),
         ),
         "SoftwareApplication", "Android, Windows, Linux, macOS",
         "Artificial Intelligence, AI, Logic, NLP", true,
@@ -193,7 +193,7 @@ $projects = array(
     new Project("sm", "saam",
         array(
             new Link("https://github.com/fulcrum6378/saam",
-                name: $sp['python'][$l], microType: "sameAs"),
+                name: $sp['softwarePython'][$l], microType: "sameAs"),
         ),
         "SoftwareApplication", "Windows", "Finance, Business, Tools", true,
     ),

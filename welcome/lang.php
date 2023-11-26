@@ -175,9 +175,9 @@ It was replaced by one which didn't need server and client.",
         'Mergen IV',
     ],
     'm4Desc' => [
-        "A logical multi-sensed artificially intelligent robot (AIR) software. Temporarily designed for Android.",
-        "یک ربات نرم افزاری هوش مصنوعی منطقی دارای حس های چندگانه که موقتا برای اندروید طراحی می شود.",
-        "Logika multsensita artefarite inteligenta roboto (AIR) softvaro. Provizore desegnita por Android.",
+        "A logical multi-sensed artificially intelligent robot (AIR) software for the FreeBSD operating system.",
+        "یک ربات نرم افزاری هوش مصنوعی منطقی دارای حس های چندگانه مخصوص سیستم عامل FreeBSD.",
+        "Logika multsensita artefarite inteligenta roboto (AIR) softvaro por la FreeBSD operaciumo..",
     ],
     'mgName' => [
         'Migratio',
@@ -231,11 +231,6 @@ statistikojn, oftecon, lastatempecon ktp.",
         'Android Source (Kotlin)',
         'سورس اندروید (کاتلین)',
         'Android Fonto (Kotlin)',
-    ],
-    'androidC++' => [
-        'Android Source (C++)',
-        'سورس اندروید (سی پلاس پلاس)',
-        'Android Fonto (C++)',
     ],
     'apk' => [
         'Download for Android',
@@ -297,7 +292,12 @@ statistikojn, oftecon, lastatempecon ktp.",
         'سورس سرور (پایتون)',
         'Servila Fonto (Python)',
     ],
-    'python' => [
+    'softwareC++' => [
+        'Software Source (C++)',
+        'سورس نرم افزار (سی پلاس پلاس)',
+        'Programaro Fonto (C++)',
+    ],
+    'softwarePython' => [
         'Software Source (Python)',
         'سورس نرم افزار (پایتون)',
         'Programaro Fonto (Python)',
