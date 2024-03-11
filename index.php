@@ -1,10 +1,11 @@
-<?php /** @noinspection PhpUnhandledExceptionInspection */
-error_reporting(E_ALL ^ E_DEPRECATED);
-
+<?php
 require_once 'welcome/lang.php';
 require_once 'welcome/vendor/autoload.php';
 
 use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
 use Twig\Loader\FilesystemLoader;
 
 // Class declarations
@@ -226,8 +227,11 @@ $data = array(
 foreach ($s as $key => $value) $data[$key] = $value[$l];
 
 // Render the template using Twig
-// For that, run $ cd welcome; ../.composer/composer require "twig/twig:^3.0" --ignore-platform-reqs
-echo (new Environment(new FilesystemLoader(["welcome"])))->render('temp.html', $data);
+try {
+    echo (new Environment(new FilesystemLoader(["welcome"])))->render('temp.html', $data);
+} catch (LoaderError|SyntaxError|RuntimeError $e) {
+    echo "Twig render error:\n" . $e->getMessage();
+}
 
 
 /*TODO:
