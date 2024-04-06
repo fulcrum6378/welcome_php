@@ -74,6 +74,8 @@ $social = array(
         "Android Apps by Mahdi Parastesh on Google Play", icon: "google_play"),
     new Link("https://stackoverflow.com/users/10728785/mahdi-parastesh",
         "User Mahdi Parastesh - Stack Overflow", icon: "stackoverflow"),
+    new Link("https://twitter.com/fulcrum6378",
+        "Mahdi Parastesh (@fulcrum6378) / X", icon: "twitter"),
 );
 $sexbook_pos = 3;
 $projects = array(
