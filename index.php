@@ -70,8 +70,8 @@ $social = array(
     new Link("https://www.linkedin.com/in/fulcrum6378/", "Mahdi Parastesh | LinkedIn", icon: "linkedin"),
     new Link("https://www.instagram.com/fulcrum6378/",
         "Mahdi Parastesh (@fulcrum6378) • Instagram photos and videos", icon: "instagram"),
-    new Link("https://play.google.com/store/apps/dev?id=8797895762316770334",
-        "Android Apps by Mahdi Parastesh on Google Play", icon: "google_play"),
+    /*new Link("https://play.google.com/store/apps/dev?id=8797895762316770334",
+        "Android Apps by Mahdi Parastesh on Google Play", icon: "google_play"),*/
     new Link("https://stackoverflow.com/users/10728785/mahdi-parastesh",
         "User Mahdi Parastesh - Stack Overflow", icon: "stackoverflow"),
     new Link("https://twitter.com/fulcrum6378",

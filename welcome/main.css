@@ -49,8 +49,8 @@ main {
     left: 0;
 }
 figure img {
-    width: 200px;
-    height: 200px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     border: 3px solid var(--CS);
 }
