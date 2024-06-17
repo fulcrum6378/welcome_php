@@ -78,9 +78,9 @@ Mi praktikas Maŝinlernadon foje uzante TensorFlow kaj foje uzante mian propran 
 Mi ankaŭ estas sperta pri Linukso, FreeBSD, OpenBSD kaj Windows Server.",
     ],
     'viewCv' => [
-        'View My CV',
+        'View My Résumé',
         'مشاهده رزومه من',
-        'Rigardu Mian CV',
+        'Vidu Mian Kursumon',
     ],
 );
 
