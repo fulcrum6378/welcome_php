@@ -67,15 +67,16 @@ for ($i = 0; $i < count($langs); $i++)
 // Process the current page: Main
 $social = array(
     new Link("https://github.com/fulcrum6378", "fulcrum6378 (Mahdi Parastesh)", icon: "github"),
+    new Link("https://codeberg.org/fulcrum6378", "Mahdi Parastesh - Codeberg.org", icon: "codeberg"),
     /*new Link("https://play.google.com/store/apps/dev?id=8797895762316770334",
         "Android Apps by Mahdi Parastesh on Google Play", icon: "google_play"),*/
     new Link("https://www.linkedin.com/in/fulcrum6378/", "Mahdi Parastesh | LinkedIn", icon: "linkedin"),
     new Link("https://stackoverflow.com/users/10728785/mahdi-parastesh",
         "User Mahdi Parastesh - Stack Overflow", icon: "stackoverflow"),
     new Link("https://t.me/Fulcrum6378", "Telegram: Contact @Fulcrum6378", icon: "telegram"),
-    /*new Link("https://www.instagram.com/fulcrum6378/",
+    new Link("https://www.instagram.com/fulcrum6378/",
         "Mahdi Parastesh (@fulcrum6378) • Instagram photos and videos", icon: "instagram"),
-    new Link("https://twitter.com/fulcrum6378",
+    /*new Link("https://x.com/fulcrum6378",
         "Mahdi Parastesh (@fulcrum6378) / X", icon: "twitter"),*/
 );
 $sexbook_pos = 3;
@@ -118,8 +119,6 @@ $projects = array(
     ),
     new Project('tx', "telexporter",
         array(
-            new Link("https://galaxystore.samsung.com/detail/ir.mahdiparastesh.telexporter",
-                name: $sp['galaxyStore'][$l], microType: "installUrl"),
             new Link("https://cafebazaar.ir/app/ir.mahdiparastesh.telexporter",
                 title: $sp['bazaarDesc'][$l], name: $sp['bazaar'][$l], microType: "installUrl"),
             new Link("https://myket.ir/app/ir.mahdiparastesh.telexporter",
@@ -133,8 +132,6 @@ $projects = array(
         array(
             new Link("https://play.google.com/store/apps/details?id=ir.mahdiparastesh.migratio",
                 name: $sp['googlePlay'][$l], microType: "installUrl"),
-            new Link("https://galaxystore.samsung.com/detail/ir.mahdiparastesh.migratio",
-                name: $sp['galaxyStore'][$l], microType: "installUrl"),
             /*new Link("https://migratio.mahdiparastesh.ir/",
                 name: $sp['website'][$l], microType: "sameAs"),*/
             new Link("https://cafebazaar.ir/app/ir.mahdiparastesh.migratio",
@@ -207,8 +204,6 @@ if (isset($_GET["fk"]) && $_GET["fk"] == "1") array_splice($projects, $sexbook_p
         array(
             new Link("https://play.google.com/store/apps/details?id=ir.mahdiparastesh.sexbook",
                 name: $sp['googlePlay'][$l], microType: "installUrl"),
-            new Link("https://galaxystore.samsung.com/detail/ir.mahdiparastesh.sexbook",
-                name: $sp['galaxyStore'][$l], microType: "installUrl"),
             new Link("https://apkpure.com/p/ir.mahdiparastesh.sexbook",
                 title: $sp['apkPureDesc'][$l], name: $sp['apkPure'][$l], microType: "installUrl"),
             new Link("https://mahdiparastesh.ir/welcome/privacy/sexbook.html",
