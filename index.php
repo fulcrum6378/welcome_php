@@ -123,8 +123,6 @@ $projects = array(
                 title: $sp['bazaarDesc'][$l], name: $sp['bazaar'][$l], microType: "installUrl"),
             new Link("https://myket.ir/app/ir.mahdiparastesh.telexporter",
                 title: $sp['myketDesc'][$l], name: $sp['myket'][$l], microType: "installUrl"),
-            new Link("https://mahdiparastesh.ir/welcome/privacy/telexporter.html",
-                name: $sp['privacy'][$l], microType: "publishingPrinciples"),
         ),
         "MobileApplication", "Android", "Tools", false,
     ),
