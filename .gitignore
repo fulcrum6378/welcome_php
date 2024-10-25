@@ -1,10 +1,4 @@
-fortuna/
 mahdi/
-migratio/
 misc/
 welcome/privacy/
-app-ads.txt
-
-# Composer (PHP dependency manager)
-welcome/composer.phar
 welcome/vendor/
