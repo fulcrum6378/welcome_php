@@ -56,8 +56,8 @@ class Link {
 // Choose the language
 global $langs, $s, $sp;
 $l = 0;
-$LANG = 'en';
-$getHl = $_GET['hl'] ?? 'en';
+$LANG = 'fa';
+$getHl = $_GET['hl'] ?? $LANG;
 for ($i = 0; $i < count($langs); $i++)
     if ($getHl == $langs[$i]['id']) {
         $LANG = $getHl;
@@ -74,8 +74,8 @@ $social = array(
     new Link("https://stackoverflow.com/users/10728785/mahdi-parastesh",
         "User Mahdi Parastesh - Stack Overflow", icon: "stackoverflow"),
     new Link("https://t.me/Fulcrum6378", "Telegram: Contact @Fulcrum6378", icon: "telegram"),
-    new Link("https://www.instagram.com/fulcrum6378/",
-        "Mahdi Parastesh (@fulcrum6378) • Instagram photos and videos", icon: "instagram"),
+    /*new Link("https://www.instagram.com/fulcrum6378/",
+        "Mahdi Parastesh (@fulcrum6378) • Instagram photos and videos", icon: "instagram"),*/
     /*new Link("https://x.com/fulcrum6378",
         "Mahdi Parastesh (@fulcrum6378) / X", icon: "twitter"),*/
 );
@@ -83,10 +83,16 @@ $sexbook_pos = 3;
 $projects = array(
     new Project("m4", "mergen_iv",
         array(
-            new Link("https://github.com/fulcrum6378/mergen_linux",
+            new Link("https://github.com/fulcrum6378/mergen_android",
+                name: $sp['androidC++'][$l], microType: "sameAs"),
+            new Link("https://github.com/fulcrum6378/mergen4bsd",
                 name: $sp['softwareC++'][$l], microType: "sameAs"),
+            new Link("https://github.com/fulcrum6378/mergen_linux",
+                name: $sp['linuxC++'][$l], microType: "sameAs"),
+            new Link("https://github.com/fulcrum6378/mycv",
+                name: $sp['softwarePython'][$l], microType: "sameAs"),
         ),
-        "SoftwareApplication", "Android", "AI, Logic, Robot", false,
+        "SoftwareApplication", "Android, FreeBSD, Linux", "AI, Logic, Robot", false,
     ),
     new Project('fr', "fortuna",
         array(
