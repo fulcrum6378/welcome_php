@@ -111,12 +111,9 @@ $sp = array(
         "HejmaBabilejo",
     ],
     'hcDesc' => [
-        "An advanced and modern LAN messenger (usually used for home or businesses).
-Its design is based on Material3. The app is currently left incomplete.",
-        "یک پیامرسان پیشرفته و مدرن برای چت روی شبکه محلی (معمولا وای فای خانه یا شرکت).
-طراحی اپ بر اساس متریال۳ است. این اپ فعلا ناقص است.",
-        "Altnivela kaj moderna LAN-mesaĝo (kutime uzata por hejmo aŭ entreprenoj).
-Ĝia dezajno baziĝas sur Material3. La programo estas nuntempe lasita nekompleta.",
+        "An advanced and modern LAN messenger (usually used for home or businesses).",
+        "یک پیامرسان پیشرفته و مدرن برای چت روی شبکه محلی (معمولا وای فای خانه یا شرکت).",
+        "Altnivela kaj moderna LAN-mesaĝo (kutime uzata por hejmo aŭ entreprenoj).",
     ],
     'itName' => [
         'InstaTools',
@@ -178,6 +175,19 @@ It was replaced by one which didn't need server and client.",
         "A real-time artificial intelligence which simulates the human brain on a computer.",
         "هوش مصنوعی زنده که مغز انسان را روی کامپیوتر شبیه سازی می کند.",
         "Realtempa artefarita inteligenteco, kiu simulas la homan cerbon sur komputilo.",
+    ],
+    'mdName' => [
+        'Multi-Calendar Date Time Picker',
+        'ماژول انتخاب تاریخ چند-تقویمه',
+        'Multi-Kalendaro Dato Tempo Picker',
+    ],
+    'mdDesc' => [
+        "An Android library based on Material2 which can choose the calendar of a specific country
+as its default calendar (requires Android 7+).",
+        "کتابخانه اندروید بر مبنای متریال2 که میتواند تقویم کشور خاصی را بعنوان تقویم پیشفرض انتخاب کند
+(اندروید 7 به بالا)",
+        "Android-biblioteko bazita sur Material2, kiu povas elekti la kalendaron de specifa lando
+kiel sian defaŭltan kalendaron (postulas Android 7+).",
     ],
     'mgName' => [
         'Migratio',

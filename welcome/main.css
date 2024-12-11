@@ -123,6 +123,7 @@ blockquote {
 img.icon {
     width: 100px;
     height: 100px;
+    border-radius: 50%;
 }
 .grid-inner p {
     color: var(--CT);
