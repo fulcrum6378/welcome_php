@@ -106,16 +106,19 @@ $projects = array(
         "SoftwareApplication", "Android, Web, iOS", "Philosophy, Lifestyle, Events, Health",
         false,
     ),
-    new Project("hc", "homechat",
-        array(),
-        "MobileApplication", "Android", "Communication, Social, LAN, Network", false,
-    ),
     new Project("md", "mcdtp",
         array(
             new Link("https://github.com/fulcrum6378/mcdtp",
                 name: $sp['androidJava'][$l], microType: "url")
         ),
         "MobileApplication", "Android", "Tools", false,
+    ),
+    new Project("hc", "homechat",
+        array(
+            new Link("https://github.com/fulcrum6378/homechat",
+                name: $sp['androidKotlin'][$l], microType: "url")
+        ),
+        "MobileApplication", "Android", "Communication, Social, LAN, Network", true,
     ),
     new Project("m4", "mergen_iv",
         array(
