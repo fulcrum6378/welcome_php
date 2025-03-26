@@ -8,7 +8,7 @@ use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
 use Twig\Loader\FilesystemLoader;
 
-// Class declarations
+// class declarations
 class Project {
     public string $id;
     public string $icon;
@@ -53,7 +53,7 @@ class Link {
     }
 }
 
-// Choose the language
+// choose a language
 global $langs, $s, $sp;
 $l = 0;
 $LANG = 'fa';
@@ -64,20 +64,18 @@ for ($i = 0; $i < count($langs); $i++)
         $l = $i;
     }
 
-// Process the current page: Main
+// process the current page: Main
 $social = array(
     new Link("https://github.com/fulcrum6378", "fulcrum6378 (Mahdi Parastesh)", icon: "github"),
     new Link("https://codeberg.org/fulcrum6378", "Mahdi Parastesh - Codeberg.org", icon: "codeberg"),
-    /*new Link("https://play.google.com/store/apps/dev?id=8797895762316770334",
-        "Android Apps by Mahdi Parastesh on Google Play", icon: "google_play"),*/
     new Link("https://www.linkedin.com/in/fulcrum6378/", "Mahdi Parastesh | LinkedIn", icon: "linkedin"),
     new Link("https://stackoverflow.com/users/10728785/mahdi-parastesh",
         "User Mahdi Parastesh - Stack Overflow", icon: "stackoverflow"),
-    new Link("https://t.me/Fulcrum6378", "Telegram: Contact @Fulcrum6378", icon: "telegram"),
-    /*new Link("https://www.instagram.com/fulcrum6378/",
-        "Mahdi Parastesh (@fulcrum6378) • Instagram photos and videos", icon: "instagram"),*/
+    new Link("https://www.instagram.com/fulcrum6378/",
+        "Mahdi Parastesh (@fulcrum6378) • Instagram photos and videos", icon: "instagram"),
     /*new Link("https://x.com/fulcrum6378",
         "Mahdi Parastesh (@fulcrum6378) / X", icon: "twitter"),*/
+    new Link("https://t.me/Fulcrum6378", "Telegram: Contact @Fulcrum6378", icon: "telegram"),
 );
 $sexbook_pos = 2;
 $projects = array(
@@ -94,17 +92,22 @@ $projects = array(
         array(
             new Link("https://github.com/fulcrum6378/fortuna",
                 name: $sp['androidKotlin'][$l], microType: "url"),
-            new Link("https://play.google.com/store/apps/details?id=ir.mahdiparastesh.fortuna.gregorian",
-                name: $sp['googlePlay'][$l], microType: "installUrl"),
+            new Link("https://apkpure.com/p/ir.mahdiparastesh.fortuna.gregorian",
+                title: $sp['3rdPartyApkStoreDesc'][$l], name: "APKPure", microType: "installUrl"),
             new Link("https://github.com/fulcrum6378/fortuna_flutter",
                 name: $sp['flutter'][$l], microType: "url"),
-            /*new Link("https://fortuna.mahdiparastesh.ir/",
-                name: $sp['websiteDemo'][$l], microType: "sameAs"),*/
             new Link("https://mahdiparastesh.ir/welcome/privacy/fortuna.html",
                 name: $sp['privacy'][$l], microType: "publishingPrinciples"),
         ),
         "SoftwareApplication", "Android, Web, iOS", "Philosophy, Lifestyle, Events, Health",
         false,
+    ),
+    new Project('it', "instatools",
+        array(
+            new Link("https://cafebazaar.ir/app/ir.mahdiparastesh.instatools",
+                title: $sp['bazaarDesc'][$l], name: $sp['bazaar'][$l], microType: "installUrl"),
+        ),
+        "MobileApplication", "Android", "Tools, Personalisation", false,
     ),
     new Project("md", "mcdtp",
         array(
@@ -132,10 +135,6 @@ $projects = array(
                 name: $sp['softwarePython'][$l], microType: "sameAs"),
         ),
         "SoftwareApplication", "Android, FreeBSD, Linux", "AI, Logic, Robot", true,
-    ),
-    new Project('it', "instatools",
-        array(),
-        "MobileApplication", "Android", "Tools, Personalisation", true,
     ),
     new Project("m3", "mergen",
         array(
@@ -181,16 +180,12 @@ $projects = array(
     ),
     new Project("mg", "migratio",
         array(
-            new Link("https://play.google.com/store/apps/details?id=ir.mahdiparastesh.migratio",
-                name: $sp['googlePlay'][$l], microType: "installUrl"),
-            /*new Link("https://migratio.mahdiparastesh.ir/",
-                name: $sp['website'][$l], microType: "sameAs"),*/
             new Link("https://cafebazaar.ir/app/ir.mahdiparastesh.migratio",
                 title: $sp['bazaarDesc'][$l], name: $sp['bazaar'][$l], microType: "installUrl"),
             new Link("https://myket.ir/app/ir.mahdiparastesh.migratio",
                 title: $sp['myketDesc'][$l], name: $sp['myket'][$l], microType: "installUrl"),
             new Link("https://apkpure.com/p/ir.mahdiparastesh.migratio",
-                title: $sp['apkPureDesc'][$l], name: $sp['apkPure'][$l], microType: "installUrl"),
+                title: $sp['3rdPartyApkStoreDesc'][$l], name: "APKPure", microType: "installUrl"),
             new Link("https://github.com/fulcrum6378/migratio_android",
                 name: $sp['androidKotlin'][$l], microType: "url"),
             new Link("https://github.com/fulcrum6378/migratio",
@@ -204,10 +199,12 @@ $projects = array(
 if (isset($_GET["fk"]) && $_GET["fk"] == "1") array_splice($projects, $sexbook_pos, 0, array(
     new Project("sx", "sexbook",
         array(
-            new Link("https://play.google.com/store/apps/details?id=ir.mahdiparastesh.sexbook",
-                name: $sp['googlePlay'][$l], microType: "installUrl"),
+            new Link("https://mahdiparastesh.ir/misc/sexbook/app-release.apk",
+                name: $sp['apk'][$l], microType: "installUrl"),
+            new Link("https://sexbook.en.uptodown.com/android",
+                title: $sp['3rdPartyApkStoreDesc'][$l], name: "Uptodown", microType: "installUrl"),
             new Link("https://apkpure.com/p/ir.mahdiparastesh.sexbook",
-                title: $sp['apkPureDesc'][$l], name: $sp['apkPure'][$l], microType: "installUrl"),
+                title: $sp['3rdPartyApkStoreDesc'][$l], name: "APKPure", microType: "installUrl"),
             new Link("https://mahdiparastesh.ir/welcome/privacy/sexbook.html",
                 name: $sp['privacy'][$l], microType: "publishingPrinciples"),
         ),
@@ -226,7 +223,7 @@ $data = array(
 );
 foreach ($s as $key => $value) $data[$key] = $value[$l];
 
-// Render the template using Twig
+// render the template using Twig
 try {
     echo (new Environment(new FilesystemLoader(["welcome"])))->render('temp.html', $data);
 } catch (LoaderError|SyntaxError|RuntimeError $e) {

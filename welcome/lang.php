@@ -252,15 +252,10 @@ statistikojn, oftecon, lastatempecon ktp.",
         'دانلود برای اندروید',
         'Elŝutu por Android',
     ],
-    'apkPure' => [
-        'APKPure',
-        'APKPure',
-        'APKPure',
-    ],
-    'apkPureDesc' => [
-        'APKPure.com a third-party APK store',
+    '3rdPartyApkStoreDesc' => [
+        'a third-party Android app store',
         'یک وبسایت معروف دانلود اپ اندروید',
-        'APKPure.com triaparta APK-butiko',
+        'triaparta Android-aplika vendejo',
     ],
     'bazaar' => [
         'Bazaar',
