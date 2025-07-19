@@ -71,8 +71,8 @@ $social = array(
     new Link("https://www.linkedin.com/in/fulcrum6378/", "Mahdi Parastesh | LinkedIn", icon: "linkedin"),
     new Link("https://stackoverflow.com/users/10728785/mahdi-parastesh",
         "User Mahdi Parastesh - Stack Overflow", icon: "stackoverflow"),
-    new Link("https://www.instagram.com/fulcrum6378/",
-        "Mahdi Parastesh (@fulcrum6378) • Instagram photos and videos", icon: "instagram"),
+    /*new Link("https://www.instagram.com/fulcrum6378/",
+        "Mahdi Parastesh (@fulcrum6378) • Instagram photos and videos", icon: "instagram"),*/
     /*new Link("https://x.com/fulcrum6378",
         "Mahdi Parastesh (@fulcrum6378) / X", icon: "twitter"),*/
     new Link("https://t.me/Fulcrum6378", "Telegram: Contact @Fulcrum6378", icon: "telegram"),
@@ -104,10 +104,10 @@ $projects = array(
     ),
     new Project('it', "instatools",
         array(
-            new Link("https://cafebazaar.ir/app/ir.mahdiparastesh.instatools",
-                title: $sp['bazaarDesc'][$l], name: $sp['bazaar'][$l], microType: "installUrl"),
+            /*new Link("https://cafebazaar.ir/app/ir.mahdiparastesh.instatools",
+                title: $sp['bazaarDesc'][$l], name: $sp['bazaar'][$l], microType: "installUrl"),*/
         ),
-        "MobileApplication", "Android", "Tools, Personalisation", false,
+        "MobileApplication", "Android", "Tools, Personalisation", true,
     ),
     new Project("md", "mcdtp",
         array(
